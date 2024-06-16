@@ -1,1975 +1,3 @@
-Module name:  A2Sequencers
-Module name:  Timer
-Module name:  AFM
-Module name:  Builtins
-Module name:  EFIMachine
-Module name:  FoxArrayBaseOptimized
-Module name:  Bitmaps IN Oberon
-Module name:  Reals
-Module name:  Shortreal
-Module name:  UsbKeyboard
-Module name:  WMRasterScale
-Module name:  AMD64Decoder
-Module name:  represents all logical processors of the system. *)
-MODULE Processors
-Module name:  BootConfig
-Module name:  Builtins
-Module name:  FPE64
-Module name:  Initializer
-Module name:  Kernel
-Module name:  Machine
-Module name:  Objects
-Module name:  Reals
-Module name:  Traps
-Module name:  Usb
-Module name:  UsbBuffers
-Module name:  UsbEhci
-Module name:  UsbHcdi
-Module name:  UsbHid
-Module name:  UsbHidDriver
-Module name:  UsbHubDriver
-Module name:  UsbKeyboard
-Module name:  UsbMouse
-Module name:  UsbStorageBase
-Module name:  UsbStorageBot
-Module name:  UsbStorageCbi
-Module name:  UsbStorageScm
-Module name:  UsbVarTdAlloc
-Module name:  Usbdi
-Module name:  WMRasterScale
-Module name:  ARMDecoder
-Module name:  ASMAMD64
-Module name:  ASN1
-Module name:  AVI
-Module name:  AcAxiDma
-Module name:  AcStreamVideoOut
-Module name:  ActiveCellsRunner
-Module name:  ActiveCellsRuntime
-Module name:  ActiveTimers
-Module name:  provides the runtime support for activities associated with active objects. *)
-
-
-MODULE Activities
-Module name:  AlmSmtpReceiver
-Module name:  AnimationCodec
-Module name:  Archives
-Module name:  Array1dCplx
-Module name:  Array1dInt
-Module name:  Array1dRat
-Module name:  Array1dRe
-Module name:  Array2dCplx
-Module name:  Array2dInt
-Module name:  Array2dRat
-Module name:  Array2dRe
-Module name:  ArrayXdCplx
-Module name:  ArrayXdInt
-Module name:  ArrayXdRat
-Module name:  ArrayXdRe
-Module name:  Attributes
-Module name:  Autostart
-Module name:  StdCoder
-Module name:  ACPI
-Module name:  AM79C970
-Module name:  Machine
-Module name:  Traps
-Module name:  ATADisks
-Module name:  Adaptec7
-Module name:  Adaptec7Script
-Module name:  Beep
-Module name:  BenchInterrupts
-Module name:  BootShell
-Module name:  Clock
-Module name:  Diskettes
-Module name:  DisplayLinear
-Module name:  EnsoniqSound
-Module name:  Environment
-Module name:  Ethernet3Com90x
-Module name:  Machine
-Module name:  Traps
-Module name:  Keyboard
-Module name:  MemCache
-Module name:  MemInfo
-Module name:  MousePS2
-Module name:  Centronics IN Oberon
-Module name:  Diskettes IN Oberon
-Module name:  Snapshot IN Oberon
-Module name:  Objects
-Module name:  PCI
-Module name:  StdIO
-Module name:  SymbiosASPI
-Module name:  provides installation services for EHCI controllers connected with PCI.
- * This service was separated from the EHCI HCD to improve code reuse with EHCI controllers wired directly to CPUs, as it
- * is the case in several ARM systems.
- *)
-MODULE UsbEhciPCI
-Module name:  UsbOhci
-Module name:  UsbUhci
-Module name:  V24
-Module name:  WMPerfMonPluginInterrupts
-Module name:  WebNetworkTimeProtocol
-Module name:  i810Sound
-Module name:  BIT
-Module name:  BMPCodec
-Module name:  BSplineCurves
-Module name:  BSplineCurvesTest
-Module name:  BT848
-Module name:  BWHCompressor
-Module name:  Base64
-Module name:  BaseTypes
-Module name:  Beep
-Module name:  BeepTest
-Module name:  BenchClockDrift
-Module name:  BenchLocks
-Module name:  BenchNew
-Module name:  BenchObjCount
-Module name:  BenchPingPong
-Module name:  BenchSpeedup
-Module name:  BenchSyntaxHighlighter
-Module name:  BenchTCP
-Module name:  BenchXML
-Module name:  BimboMail
-Module name:  BimboScanner
-Module name:  Bimso
-Module name:  Bin2Hex
-Module name:  BinToCode
-Module name:  BitSets
-Module name:  BitStreams
-Module name:  Bluetooth
-Module name:  BluetoothHCI
-Module name:  BluetoothL2CAP
-Module name:  BluetoothRFCOMM
-Module name:  BluetoothTest
-Module name:  BluetoothUART
-Module name:  BluetoothUSB
-Module name:  BootConsole
-Module name:  BootManager
-Module name:  CATServer
-Module name:  CDRecord
-Module name:  CDRecordLib
-Module name:  CDRecordUtils
-Module name:  CLUTs
-Module name:  CPU
-Module name:  CPUID
-Module name:  CRC
-Module name:  CSS2
-Module name:  CSS2Parser
-Module name:  CSS2Properties
-Module name:  CSS2Scanner
-Module name:  CSV
-Module name:  Caches
-Module name:  CalcConvolution
-Module name:  CalcD1
-Module name:  CalcD2
-Module name:  CalcD3
-Module name:  CalcD4
-Module name:  CalcDiethelm
-Module name:  CalcFn
-Module name:  CalcGauss
-Module name:  CalcGrunwald
-Module name:  CharacterLineup
-Module name:  Checksum
-Module name:  Clock
-Module name:  Codecs
-Module name:  ColorModels
-Module name:  CommandTest
-Module name:  Commands
-Module name:  Compiler
-Module name:  CompilerInterface
-Module name:  ComplexNumbers
-Module name:  ComponentInfo
-Module name:  ComponentViewer
-Module name:  Configuration
-Module name:  ContextualDependency
-Module name:  Machine
-Module name:  Heaps
-Module name:  Kernel
-Module name:  Machine
-Module name:  MemCache
-Module name:  ported for the windows version, fof. *)
-
-MODULE Objects
-Module name:  Traps
-Module name:  Display
-Module name:  Kernel32
-Module name:  Counters
-Module name:  CryptoAES
-Module name:  CryptoARC4
-Module name:  CryptoBase64
-Module name:  CryptoBigNumbers
-Module name:  CryptoBlowfish
-Module name:  CryptoCAST
-Module name:  CryptoCSPRNG
-Module name:  CryptoCiphers
-Module name:  CryptoDES
-Module name:  CryptoDES3
-Module name:  CryptoDSA
-Module name:  CryptoDiffieHellman
-Module name:  CryptoFortuna
-Module name:  CryptoFortunaRng
-Module name:  CryptoHMAC
-Module name:  CryptoHashes
-Module name:  CryptoIDEA
-Module name:  CryptoKeccakF1600
-Module name:  CryptoKeccakSponge
-Module name:  CryptoMD5
-Module name:  CryptoPrimes
-Module name:  CryptoRSA
-Module name:  CryptoSHA1
-Module name:  CryptoSHA256
-Module name:  CryptoSHA3
-Module name:  CryptoStreams
-Module name:  CryptoTestBigNumbers
-Module name:  CryptoTestCiphers
-Module name:  CryptoTestDH
-Module name:  CryptoTestDSA
-Module name:  CryptoTestHMAC
-Module name:  CryptoTestHashes
-Module name:  CryptoTestRSA
-Module name:  CryptoTools
-Module name:  CryptoTwofish
-Module name:  CryptoUtils
-Module name:  CubeCplx
-Module name:  CubeInt
-Module name:  CubeRat
-Module name:  CubeRe
-Module name:  CyberbitNetInstall
-Module name:  CyrillicUtilities
-Module name:  DES
-Module name:  DHCP
-Module name:  DNS
-Module name:  DTPData
-Module name:  DTPEditor
-Module name:  DTPImage
-Module name:  DTPRect
-Module name:  DTPText
-Module name:  DTPUtilities
-Module name:  DTPView
-Module name:  Unix
-Module name:  Data
-Module name:  DataErrors
-Module name:  DataIO
-Module name:  DataLists
-Module name:  DataQueues
-Module name:  DataStacks
-Module name:  DataTrees
-Module name:  Dates
-Module name:  DebugLog
-Module name:  Debugging
-Module name:  Decoder
-Module name:  Diagnostics
-Module name:  DiffLib
-Module name:  DiskBenchmark
-Module name:  DiskCaches
-Module name:  DiskFS
-Module name:  DiskTests
-Module name:  DiskVolumes
-Module name:  Disks
-Module name:  DisplayGTF
-Module name:  DisplayNull
-Module name:  Displays
-Module name:  DivXDecoder
-Module name:  DivXHelper
-Module name:  DivXTypes
-Module name:  Drand48
-Module name:  DriverDatabase
-Module name:  DynamicStrings
-Module name:  DynamicWebpage
-Module name:  DynamicWebpagePlugin
-Module name:  Machine
-Module name:  Machine
-Module name:  EFI
-Module name:  EFIA2Loader
-Module name:  EFIBlockIO
-Module name:  EFIDiskIO
-Module name:  EFIFileProtocol
-Module name:  EFIGraphicalConsole
-Module name:  EFIGraphicsOutput
-Module name:  EFILib
-Module name:  EFILoadedImage
-Module name:  EFISimpleFS
-Module name:  EFITest
-Module name:  EFITrace
-Module name:  Errors
-Module name:  Events
-Module name:  EventsFileLog
-Module name:  EventsKernelLog
-Module name:  EventsMemoryLog
-Module name:  EventsUtils
-Module name:  Example1
-Module name:  Example2
-Module name:  Example3
-Module name:  Example4
-Module name:  Example5
-Module name:  Example6
-Module name:  Example7
-Module name:  Example8
-Module name:  ExampleTextWriter
-Module name:  implements object monitors and provides runtime support for block statements marked as exclusive. *)
-MODULE ExclusiveBlocks
-Module name:  ExerciseGroups
-Module name:  FATFiles
-Module name:  FATScavenger
-Module name:  FATVolumes
-Module name:  FNHistories
-Module name:  FP1616
-Module name:  FSTools
-Module name:  FTP
-Module name:  FTPClient
-Module name:  FTPFS
-Module name:  Fido
-Module name:  FileHandlers
-Module name:  FileTrapWriter
-Module name:  Files
-Module name:  FirewireLow
-Module name:  FirewireLowUtil
-Module name:  FirewireSBP2
-Module name:  FoxA2Interface
-Module name:  FoxAMD64Assembler
-Module name:  FoxAMD64InstructionSet
-Module name:  FoxAMDBackend
-Module name:  FoxARMAssembler
-Module name:  FoxARMBackend
-Module name:  FoxARMInstructionSet
-Module name:  FoxActiveCells
-Module name:  FoxArrayBase
-Module name:  FoxAssembler
-Module name:  FoxBackend
-Module name:  FoxBasic
-Module name:  FoxBinaryCode
-Module name:  FoxCSharpFrontend
-Module name:  FoxCSharpParser
-Module name:  FoxCSharpScanner
-Module name:  FoxCodeGenerators
-Module name:  FoxDisassembler
-Module name:  FoxDocumentationBackend
-Module name:  FoxDocumentationHtml
-Module name:  [[FoxDocumentationParser]].
-
-	{{{
-	Documentation = {Document}.
-	Document      = {NewLine} Description {Section}.
-
-	Description   = {Paragraph}.
-	Paragraph     = CodeBlock | TextBlock | Heading | ListItem  | Table | Line.
-
-	Section       = SectionMarker Title Contents.
-	SectionMarker = "@" | "@@" | "@@@".
-
-	CodeBlock     = "{{{" any text "}}}".
-
-	Contents      = {Paragraph}.
-	Title         = Text.
-	TextBlock     = Text.
-
-	Heading       = HeadingMarker Text.
-	HeadingMarker = "=" | "==" | "===" .
-
-	ListItem      = ItemMarker Text.
-	ItemMarker    = NumberMarker | BulletMarker.
-	NumberMarker  = "#" | "##" | "###".
-	BulletMarker  = "*" | "**" | "***".
-
-	Table         = Row {Row}.
-	Row           = Cell {Cell}.
-	Cell          = CellMarker {TextElement}.
-	CellMarker    = HeaderMarker | DataMarker.
-	HeaderMarker  = "|=".
-	DataMarker    = "|".
-	Line          = "----".
-
-	Text          = {TextElement}.
-	TextElement   = Default | Italic | Bold | Link | URL | Label | Code | LineBreak.
-	Default       = word.
-
-	Italic        = ItalicMarker {TextElement} ItalicMarker.
-	ItalicMarker  = "/".
-
-	Bold          = BoldMarker {TextElement} BoldMarker.
-	BoldMarker    = "*".
-
-	Underline          = UnderlineMarker {TextElement} UnderlineMarker.
-	UnderlineMarker    = "_".
-
-	Link          = "[[" Target [ "|"  {TextElement} ] "]]".
-	Target        = word.
-
-	URL           = "[[" url "]]" |
-			"[[" url "|" {TextElement} "]]".
-
-	Label         = "<<" Target ">>".
-
-	Code          = "{{{" {TextElement} "}}}".
-
-	LineBreak     = "\\".
-	}}}
-
-	@author Felix Friedrich
-*)
-
-
-MODULE FoxDocumentationParser
-Module name:  FoxDocumentationPrinter
-Module name:  FoxDocumentationScanner
-Module name:  documentation. Independent of source language.
-
-	The documentation tree represents the [[docuEBNF|EBNF]] as implemented by [[FoxDocumentationParser]]
-	#author# Felix Friedrich
-*)
-MODULE FoxDocumentationTree
-Module name:  FoxFingerprinter
-Module name:  FoxFormats
-Module name:  FoxFrontend
-Module name:  FoxGenericObjectFile
-Module name:  FoxGlobal
-Module name:  containing base class of hardware description object for emission of hardware on FPGAs
-**)
-
-
-MODULE FoxHardware
-Module name:  FoxInterfaceComparison
-Module name:  FoxIntermediateAssembler
-Module name:  FoxIntermediateBackend
-Module name:  FoxIntermediateCode
-Module name:  FoxIntermediateLinker
-Module name:  FoxIntermediateObjectFile
-Module name:  FoxIntermediateParser
-Module name:  FoxInterpreter
-Module name:  FoxInterpreterBackend
-Module name:  FoxInterpreterSymbols
-Module name:  FoxMinosObjectFile
-Module name:  FoxMinosObjectFile
-Module name:  FoxMinosObjectFile
-Module name:  FoxMinosObjectFile
-Module name:  FoxOberonFrontend
-Module name:  FoxParser
-Module name:  FoxPrintout
-Module name:  FoxProfiler
-Module name:  FoxProgTools
-Module name:  FoxScanner
-Module name:  FoxSections
-Module name:  FoxSemanticChecker
-Module name:  FoxSyntaxTree
-Module name:  FoxTRMAssembler
-Module name:  FoxTRMBackend
-Module name:  FoxTRMInstructionSet
-Module name:  FoxTRMTools
-Module name:  FoxTest
-Module name:  #author# Felix Friedrich, Patrick Hunziker
-	#purpose# Testfile Generator
-*)
-
-MODULE FoxTestBackend
-Module name:  FoxTextualSymbolFile
-Module name:  FoxTranspilerBackend
-Module name:  FractalDemo
-Module name:  GIFCodec
-Module name:  GZip
-Module name:  provides an automatic memory management for pointers allocated using the NEW statement. *)
-
-MODULE GarbageCollector
-Module name:  GenericLinker
-Module name:  GenericSort
-Module name:  Gfx
-Module name:  GfxBuffer
-Module name:  GfxFonts
-Module name:  GfxImages
-Module name:  GfxMatrix
-Module name:  GfxPaths
-Module name:  GfxRaster
-Module name:  GfxRegions
-Module name:  HCubeCplx
-Module name:  HCubeInt
-Module name:  HCubeRat
-Module name:  HCubeRe
-Module name:  HTMLParser
-Module name:  HTMLScanner
-Module name:  HTMLTransformer
-Module name:  HTTPSession
-Module name:  HTTPSupport
-Module name:  provides a lock-free data structure called Heap that handles memory management. *)
-
-MODULE HeapManager
-Module name:  Heaps
-Module name:  HelloWorld
-Module name:  HelloWorld1
-Module name:  HelloWorld2
-Module name:  HelloWorld3
-Module name:  HierarchicalProfiler
-Module name:  HierarchicalProfiler0
-Module name:  HostClipboard
-Module name:  HotKeys
-Module name:  HotKeysCommands
-Module name:  APIC
-Module name:  Array1dBytes
-Module name:  ArrayXdBytes
-Module name:  Builtins
-Module name:  EFIMachine
-Module name:  FoxArrayBaseOptimized
-Module name:  Bitmaps IN Oberon
-Module name:  Raster
-Module name:  Reals
-Module name:  UsbKeyboard
-Module name:  WMRasterScale
-Module name:  I386Decoder
-Module name:  ICMP
-Module name:  IDCT
-Module name:  IMAP
-Module name:  IMAPClient
-Module name:  IMAPGUI
-Module name:  IMAPUtilities
-Module name:  IP
-Module name:  IPBandwidth
-Module name:  IPv4
-Module name:  IPv6
-Module name:  ISO9660Files
-Module name:  ISO9660Volumes
-Module name:  In
-Module name:  InOutExample
-Module name:  Inflate
-Module name:  Info
-Module name:  InitNetwork
-Module name:  Inputs
-Module name:  Installer
-Module name:  Intel8255x
-Module name:  Interfaces
-Module name:  InterpreterShell
-Module name:  provides a hardware-independent synchronisation primitive for awaiting the occurrence of interrupts. *)
-
-MODULE Interrupts
-Module name:  IsoImages
-Module name:  JPEG2000Decoder
-Module name:  JPEG2000DecoderCS
-Module name:  JPEG2000DecoderUtil
-Module name:  JPEGDecoder
-Module name:  JPEGEncoder
-Module name:  JavaLocks
-Module name:  Joysticks
-Module name:  JoysticksTest
-Module name:  Kernel
-Module name:  KernelLog
-Module name:  KernelLogger
-Module name:  LPR
-Module name:  LinEqCholesky
-Module name:  LinEqLU
-Module name:  LinEqRe
-Module name:  LinEqSVD
-Module name:  Linker
-Module name:  Glue
-Module name:  Unix
-Module name:  Loader
-Module name:  Localization
-Module name:  Locks
-Module name:  Looks
-Module name:  Loopback
-Module name:  MD5
-Module name:  MP3Decoder
-Module name:  MP3Player
-Module name:  MPEGTables
-Module name:  MPEGUtilities
-Module name:  MPEGVideoDecoder
-Module name:  Mail
-Module name:  MailStorage
-Module name:  MainMenu
-Module name:  MakeIsoImages
-Module name:  Math
-Module name:  MathCbrt
-Module name:  MathCplx
-Module name:  MathCplxSeries
-Module name:  MathErf
-Module name:  MathGamma
-Module name:  MathInt
-Module name:  MathL
-Module name:  MathMitLef
-Module name:  MathRat
-Module name:  MathRe
-Module name:  MathReSeries
-Module name:  MatrixModels
-Module name:  MediaPlayer
-Module name:  MemoryReader
-Module name:  MenuEdit
-Module name:  MenuPages
-Module name:  MinInitNetwork
-Module name:  MinosLinker
-Module name:  Models
-Module name:  ModuleParser
-Module name:  ModuleTrees
-Module name:  Modules
-Module name:  MouseSerial
-Module name:  MoveToFront
-Module name:  MtxCplx
-Module name:  MtxInt
-Module name:  MtxRat
-Module name:  MtxRe
-Module name:  MultiLogger
-Module name:  provides synchronization objects called mutexes. *)
-MODULE Mutexes
-Module name:  NCR810Disks
-Module name:  NCRScript
-Module name:  NbrCplx
-Module name:  NbrInt
-Module name:  NbrInt16
-Module name:  NbrInt32
-Module name:  NbrInt64
-Module name:  NbrInt8
-Module name:  NbrRat
-Module name:  NbrRe
-Module name:  NbrRe32
-Module name:  NbrRe64
-Module name:  NbrStrings
-Module name:  Network
-Module name:  NetworkMii
-Module name:  NewHTTPClient
-Module name:  NextPrime
-Module name:  Notepad
-Module name:  OGGUtilities
-Module name:  OGGVorbisPlayer
-Module name:  OSC
-Module name:  OSCEval
-Module name:  OSCExample
-Module name:  OSCNet
-Module name:  OSCQueue
-Module name:  OSCRegistry
-Module name:  OSCService
-Module name:  OZip3
-Module name:  ASCIITab IN Oberon
-Module name:  Aos IN Oberon
-Module name:  AsciiCoder IN Oberon
-Module name:  Asteroids IN Oberon
-Module name:  Attributes IN Oberon
-Module name:  AudioGadgets IN Oberon
-Module name:  BMP IN Oberon
-Module name:  BMPImages IN Oberon
-Module name:  BTrees IN Oberon
-Module name:  Backdrops IN Oberon
-Module name:  Backup IN Oberon
-Module name:  BartSimpson IN Oberon
-Module name:  Base64 IN Oberon
-Module name:  BasicFigures IN Oberon
-Module name:  BasicGadgets IN Oberon
-Module name:  BellmanMinimisation IN Oberon
-Module name:  BinHex IN Oberon
-Module name:  BookCompiler IN Oberon
-Module name:  BookDocs IN Oberon
-Module name:  Books IN Oberon
-Module name:  Books0 IN Oberon
-Module name:  BooksHelp IN Oberon
-Module name:  Browser IN Oberon
-Module name:  Builder IN Oberon
-Module name:  CRA IN Oberon
-Module name:  generated by Coco-R *)
-MODULE CRP IN Oberon
-Module name:  generated by Coco-R *)
-MODULE CRS IN Oberon
-Module name:  CRT IN Oberon
-Module name:  CRX IN Oberon
-Module name:  CUSM IN Oberon
-Module name:  Calc IN Oberon
-Module name:  Calculator IN Oberon
-Module name:  CalculatorGadgets IN Oberon
-Module name:  Cards IN Oberon
-Module name:  CleanupFiles IN Oberon
-Module name:  Clocks IN Oberon
-Module name:  Coco IN Oberon
-Module name:  ColorDriver IN Oberon
-Module name:  ColorGadgets IN Oberon
-Module name:  ColorModels IN Oberon
-Module name:  ColorSystem IN Oberon
-Module name:  ColorTools IN Oberon
-Module name:  ColorWells IN Oberon
-Module name:  Colors IN Oberon
-Module name:  Columbus IN Oberon
-Module name:  Compiler IN Oberon
-Module name:  Complex IN Oberon
-Module name:  Compress IN Oberon
-Module name:  CompressCrypt IN Oberon
-Module name:  Configuration IN Oberon
-Module name:  Conversions IN Oberon
-Module name:  Copyright IN Oberon
-Module name:  Cups IN Oberon
-Module name:  DBF IN Oberon
-Module name:  DBFDump IN Oberon
-Module name:  DOS IN Oberon
-Module name:  DVIDocs IN Oberon
-Module name:  DVIFiles IN Oberon
-Module name:  DVIViewers IN Oberon
-Module name:  Dates IN Oberon
-Module name:  DayTime IN Oberon
-Module name:  Decoder IN Oberon
-Module name:  Desktops IN Oberon
-Module name:  Diagrams IN Oberon
-Module name:  Diff IN Oberon
-Module name:  DiffGadgets IN Oberon
-Module name:  Dim3Base IN Oberon
-Module name:  Dim3Engine IN Oberon
-Module name:  Dim3Frames IN Oberon
-Module name:  Dim3Paint IN Oberon
-Module name:  Dim3Read IN Oberon
-Module name:  Directories IN Oberon
-Module name:  Diskette IN Oberon
-Module name:  Disks IN Oberon
-Module name:  Display IN Oberon
-Module name:  Display3 IN Oberon
-Module name:  DocumentSkeleton IN Oberon
-Module name:  Documents IN Oberon
-Module name:  ET IN Oberon
-Module name:  Edit IN Oberon
-Module name:  EditKeys IN Oberon
-Module name:  EditTools IN Oberon
-Module name:  Effects IN Oberon
-Module name:  ErrorGadgets IN Oberon
-Module name:  ExampleOberon IN Oberon
-Module name:  illustrates how gadgets can be manipulated under program control.
-	Commands exported by this module are used in the tutorial "GadgetsOberon.html".
-*)
-
-MODULE Examples IN Oberon
-Module name:  Examples1 IN Oberon
-Module name:  FATDocs IN Oberon
-Module name:  FATFiles IN Oberon
-Module name:  FATTools IN Oberon
-Module name:  FTP IN Oberon
-Module name:  FTPDocs IN Oberon
-Module name:  FileDir IN Oberon
-Module name:  FileDisks IN Oberon
-Module name:  Files IN Oberon
-Module name:  Find IN Oberon
-Module name:  Finder IN Oberon
-Module name:  Finger IN Oberon
-Module name:  FontEditor IN Oberon
-Module name:  Fonts IN Oberon
-Module name:  Freecell IN Oberon
-Module name:  GIF IN Oberon
-Module name:  GIFImages IN Oberon
-Module name:  GZReaders IN Oberon
-Module name:  GZWriters IN Oberon
-Module name:  GZip IN Oberon
-Module name:  Gadgets IN Oberon
-Module name:  GadgetsIn IN Oberon
-Module name:  GadgetsOut IN Oberon
-Module name:  Gages IN Oberon
-Module name:  Gfx IN Oberon
-Module name:  GfxBuffer IN Oberon
-Module name:  GfxDemo IN Oberon
-Module name:  GfxDisplay IN Oberon
-Module name:  GfxFonts IN Oberon
-Module name:  GfxFonts0 IN Oberon
-Module name:  GfxImages IN Oberon
-Module name:  GfxMatrix IN Oberon
-Module name:  GfxOType IN Oberon
-Module name:  GfxPKFonts IN Oberon
-Module name:  GfxPS IN Oberon
-Module name:  GfxPaths IN Oberon
-Module name:  GfxPrinter IN Oberon
-Module name:  GfxRaster IN Oberon
-Module name:  GfxRegions IN Oberon
-Module name:  GfxTest IN Oberon
-Module name:  Gopher IN Oberon
-Module name:  Graphs IN Oberon
-Module name:  HPCalc IN Oberon
-Module name:  HPLaserPrinter IN Oberon
-Module name:  HPPCL IN Oberon
-Module name:  HTML IN Oberon
-Module name:  HTMLDocs IN Oberon
-Module name:  HTMLForms IN Oberon
-Module name:  HTMLImages IN Oberon
-Module name:  HTMLPlugIns IN Oberon
-Module name:  HTMLTables IN Oberon
-Module name:  HTTPDocs IN Oberon
-Module name:  HTTPDocs0 IN Oberon
-Module name:  Hello IN Oberon
-Module name:  HelloServer IN Oberon
-Module name:  Hex IN Oberon
-Module name:  Histogram IN Oberon
-Module name:  HyperDocTools IN Oberon
-Module name:  HyperDocs IN Oberon
-Module name:  ICO IN Oberon
-Module name:  IFF IN Oberon
-Module name:  IFS IN Oberon
-Module name:  Icons IN Oberon
-Module name:  ImageDocs IN Oberon
-Module name:  ImageGadgets IN Oberon
-Module name:  Images IN Oberon
-Module name:  In IN Oberon
-Module name:  Input IN Oberon
-Module name:  JPEG IN Oberon
-Module name:  JPEGImages IN Oberon
-Module name:  Kernel IN Oberon
-Module name:  LPRPrinter IN Oberon
-Module name:  LayLa IN Oberon
-Module name:  LayLa2 IN Oberon
-Module name:  LayLa2S IN Oberon
-Module name:  LayLaDemo IN Oberon
-Module name:  LayLaS IN Oberon
-Module name:  LayoutPanels IN Oberon
-Module name:  LayoutPanels0 IN Oberon
-Module name:  Layouts IN Oberon
-Module name:  LeoBasic IN Oberon
-Module name:  LeoBasicEditors IN Oberon
-Module name:  LeoCaptionEditors IN Oberon
-Module name:  LeoCaptions IN Oberon
-Module name:  LeoDocs IN Oberon
-Module name:  LeoDraw IN Oberon
-Module name:  LeoFrames IN Oberon
-Module name:  LeoImageEditors IN Oberon
-Module name:  LeoImages IN Oberon
-Module name:  LeoLists IN Oberon
-Module name:  LeoOutliners IN Oberon
-Module name:  LeoPanels IN Oberon
-Module name:  LeoPathEditors IN Oberon
-Module name:  LeoPaths IN Oberon
-Module name:  LeoPenEditors IN Oberon
-Module name:  LeoPens IN Oberon
-Module name:  LeoSplineEditors IN Oberon
-Module name:  LeoSplines IN Oberon
-Module name:  LeoTools IN Oberon
-Module name:  Leonardo IN Oberon
-Module name:  Links IN Oberon
-Module name:  Lissajous IN Oberon
-Module name:  ListDags IN Oberon
-Module name:  ListGadgets IN Oberon
-Module name:  ListModels IN Oberon
-Module name:  ListRiders IN Oberon
-Module name:  Lists IN Oberon
-Module name:  MIME IN Oberon
-Module name:  Magnifier IN Oberon
-Module name:  Mail IN Oberon
-Module name:  MakePoints IN Oberon
-Module name:  Menu IN Oberon
-Module name:  MenuViewers IN Oberon
-Module name:  MineSweeper IN Oberon
-Module name:  Miscellaneous IN Oberon
-Module name:  Oberon IN A2
-Module name:  Modules IN Oberon
-Module name:  MultiMail IN Oberon
-Module name:  NamePlates IN Oberon
-Module name:  Navigators IN Oberon
-Module name:  NetSystem IN Oberon
-Module name:  NetTools IN Oberon
-Module name:  News IN Oberon
-Module name:  NoteBooks IN Oberon
-Module name:  OFSTools IN Oberon
-Module name:  OFormatter IN Oberon
-Module name:  OFormatterIO IN Oberon
-Module name:  for the OP2 compiler *)
-
-
-
-MODULE OPA IN Oberon
-Module name:  OPAData IN Oberon
-Module name:  OPB IN Oberon
-Module name:  OPC IN Oberon
-Module name:  OPL IN Oberon
-Module name:  OPM IN Oberon
-Module name:  OPO IN Oberon
-Module name:  OPP IN Oberon
-Module name:  OPS IN Oberon
-Module name:  OPT IN Oberon
-Module name:  OPV IN Oberon
-Module name:  OTFonts IN Oberon
-Module name:  OTInt IN Oberon
-Module name:  OTScan IN Oberon
-Module name:  OType IN Oberon
-Module name:  Oberon IN Oberon
-Module name:  ObjExplorer IN Oberon
-Module name:  Objects IN Oberon
-Module name:  OpenDemo IN Oberon
-Module name:  OpenDemo2 IN Oberon
-Module name:  Organizers IN Oberon
-Module name:  Out IN Oberon
-Module name:  OutStub IN Oberon
-Module name:  Outlines IN Oberon
-Module name:  PC IN Oberon
-Module name:  PCARMDecoder IN Oberon
-Module name:  PCITools IN Oberon
-Module name:  PCX IN Oberon
-Module name:  PCXImages IN Oberon
-Module name:  PPM IN Oberon
-Module name:  PS IN Oberon
-Module name:  PSD IN Oberon
-Module name:  PSDImages IN Oberon
-Module name:  PSPrinter IN Oberon
-Module name:  Packages IN Oberon
-Module name:  PanelDocs IN Oberon
-Module name:  Panels IN Oberon
-Module name:  Partitions IN Oberon
-Module name:  PasswordFields IN Oberon
-Module name:  PhonePad IN Oberon
-Module name:  PictConverters IN Oberon
-Module name:  PictImages IN Oberon
-Module name:  Pictures IN Oberon
-Module name:  Plot IN Oberon
-Module name:  Plotter IN Oberon
-Module name:  PlugIns IN Oberon
-Module name:  Popups IN Oberon
-Module name:  Portraits IN Oberon
-Module name:  Printer IN Oberon
-Module name:  Printer3 IN Oberon
-Module name:  Profiler IN Oberon
-Module name:  ProgressMeters IN Oberon
-Module name:  QuotedPrintable IN Oberon
-Module name:  RX IN Oberon
-Module name:  RXA IN Oberon
-Module name:  RandomNumbers IN Oberon
-Module name:  RefGadgets IN Oberon
-Module name:  Rembrandt IN Oberon
-Module name:  Rembrandt0 IN Oberon
-Module name:  RembrandtDocs IN Oberon
-Module name:  RembrandtTools IN Oberon
-Module name:  Reminders IN Oberon
-Module name:  Rot13 IN Oberon
-Module name:  SaveArt IN Oberon
-Module name:  SaveDecay IN Oberon
-Module name:  SaveLife IN Oberon
-Module name:  SaveParticles IN Oberon
-Module name:  SavePoints IN Oberon
-Module name:  is freed
-	- InstallDefault procedure added to restore the default fader.
-	- Log output is now smart about placing newlines.
-1.1 - 1999.11.05/19:46 - bpsm
-	- mouseTolerance added. Mouse must move at least this far to be noticed.
-	- Particles fader moved to a separate module
-	- Default screen saver now just blanks the screen.
-	- Rand added
-	- Limit added
-	- HandleFiller cleaned up.
-1.1.1 - 1999.11.06/00:04 - bpsm
-	- Screen is now redrawn explicitly after the fader has been stopped.
-1.1.2 - 1999.11.12/16:45 - bpsm
-	- TextFrames now redraw correctly on the Sharks (again).
-	- Clicking the mouse on SaveScreen.Run no longer causes wierdness.
-1.1.3 - 2000.03.29 - bpsm
-	- hopefully final tweak of redraw behavior (thanks pieter!)
-	- should handle timer rollover
-	- screen saver engine retooled internally.
-	- less verbose.
-	- faders no longer continue to draw after a system TRAP
-1.1.4 - 2000.04.03 - bpsm
-	- automatic activation of screen saver on loading (req: pjm)
-	- default wait time changed to 10 minutes (req: pjm)
-*)
-
-
-MODULE SaveScreen IN Oberon
-Module name:  SaveSisyphus IN Oberon
-Module name:  SaveSwarm IN Oberon
-Module name:  SaveTiles IN Oberon
-Module name:  Scheme IN Oberon
-Module name:  SchemeOps IN Oberon
-Module name:  Scramble IN Oberon
-Module name:  Script IN Oberon
-Module name:  ScriptFrames IN Oberon
-Module name:  ScriptGadgets IN Oberon
-Module name:  ScrollViews IN Oberon
-Module name:  Scrollbars IN Oberon
-Module name:  SetGadgets IN Oberon
-Module name:  Sets IN Oberon
-Module name:  Shanghai IN Oberon
-Module name:  Simulator IN Oberon
-Module name:  Sisiphus IN Oberon
-Module name:  Skeleton IN Oberon 
-Module name:  Sokoban IN Oberon
-Module name:  Solitaire IN Oberon
-Module name:  Sort IN Oberon
-Module name:  Spider IN Oberon
-Module name:  Streams IN Oberon
-Module name:  Strings IN Oberon
-Module name:  StyleGadgets IN Oberon
-Module name:  Styles IN Oberon
-Module name:  Suitcases IN Oberon
-Module name:  Notes
-		Some statements are not portable (check them out using Search.NotPortable).
-		If a transparent gadget is placed on swarm gadget then it is messed up, that's because of
-		the way transparent gadgets are handled and cannot be helped.
-		Under Oberon System 3 for Windows the screensaver flickers if there are too many bees
-		in a swarm, that's obviously a Windows-related problem...
-*)
-
-MODULE Swarm IN Oberon
-Module name:  SysLog IN Oberon
-Module name:  System IN Oberon
-Module name:  illustrates how to use the TCP based part of NetSystem.
-	A command Time is implemented, which ask your time server for the current time. *)
-
-MODULE TCPExample IN Oberon
-Module name:  TFTPTool IN Oberon
-Module name:  TGA IN Oberon
-Module name:  TGZ IN Oberon
-Module name:  Tar IN Oberon
-Module name:  TaskExample IN Oberon
-Module name:  TeXTools IN Oberon
-Module name:  Telnet IN Oberon
-Module name:  TelnetGadgets IN Oberon
-Module name:  TerminalFrames IN Oberon
-Module name:  TerminalGadgets IN Oberon
-Module name:  Terminals IN Oberon
-Module name:  TestNet IN Oberon
-Module name:  Tetris IN Oberon
-Module name:  TextDocs IN Oberon
-Module name:  TextFields IN Oberon
-Module name:  TextFrames IN Oberon
-Module name:  TextGadgets IN Oberon
-Module name:  TextGadgets0 IN Oberon
-Module name:  TextMail IN Oberon
-Module name:  displays simple popup menus in TextDocs when clicking outside the text.
-	The contents of the menus can be edited and are stored in the file "TextPopups.Text"
-
-	This is an example of a menu description:
-
-	[Mod]	<= applies for files with suffix .Mod
-	Compiler.Compile *
-	Compiler.Compile */s
-	Compiler.Compile */f	<= commands that can be executed
-	Decoder.Decode ^
-	Analyzer.Analyze *
-	--------------------
-	<5 Recent Files>	<= include a list with the 5 recent files, you can also replace 5 by any other 	--------------------		number. These files can be opened directly by selecting the appropriate menu item
-	<Procedures>	<= include a list of all procedures declared in the text file
-			You can jump to the corresponding text position by selecting a menu item
-
-	<Types>	<= include a list of all types declared in the text file
-			You can jump to the corresponding text position by selecting a menu item
-	[Text]	<= applies for files with suffix .Text
-	TextDocs.SearchDiff /w
-	--------------------
-	<5 Recent Files>
-
-
-	[Tool]	<= applies for files with suffix .Tool
-	<5 Recent Files>
-
-	...
-*)
-
-MODULE TextPopups IN Oberon
-Module name:  TextStreams IN Oberon
-Module name:  Texts IN Oberon
-Module name:  TimeStamps IN Oberon
-Module name:  Types IN Oberon
-Module name:  illustrates how to use the UDP based part of NetSystem.
-	A command DNS is implemented, which does a DNS look up. *)
-
-MODULE UDPExample IN Oberon
-Module name:  UUDecoder IN Oberon
-Module name:  V24 IN Oberon
-Module name:  V24Gadgets IN Oberon
-Module name:  V24Log IN Oberon
-Module name:  ViewSkeleton IN Oberon
-Module name:  Viewers IN Oberon
-Module name:  Views IN Oberon
-Module name:  Vinci IN Oberon
-Module name:  VinciDocs IN Oberon
-Module name:  VinciEditors IN Oberon
-Module name:  VinciGadgets IN Oberon
-Module name:  VinciPens IN Oberon
-Module name:  VinciShapes IN Oberon
-Module name:  WTS IN Oberon
-Module name:  WTSDraw IN Oberon
-Module name:  WTSFold IN Oberon
-Module name:  WTSPict IN Oberon
-Module name:  WTSStamp IN Oberon
-Module name:  Watson IN Oberon
-Module name:  Watson0 IN Oberon
-Module name:  XBM IN Oberon
-Module name:  XPM IN Oberon
-Module name:  XYplane IN Oberon
-Module name:  Zip IN Oberon
-Module name:  ZipDocs IN Oberon
-Module name:  ZipTool IN Oberon
-Module name:  ZlibReaders IN Oberon
-Module name:  ZlibWriters IN Oberon
-Module name:  ants IN Oberon
-Module name:  fofAutomatic IN Oberon
-Module name:  ants1dArrayObjects IN Oberon
-Module name:  ants1dArrayVectors IN Oberon
-Module name:  ants1dCup IN Oberon
-Module name:  ants3D IN Oberon
-Module name:  ants3dArrayObjects IN Oberon
-Module name:  ants3dArrayViews IN Oberon
-Module name:  ants3dBinaryIsingS2 IN Oberon
-Module name:  ants4dArrayObjects IN Oberon
-Module name:  ants4dBinaryIsingS2 IN Oberon
-Module name:  antsArrayConversions IN Oberon
-Module name:  antsArrayImages IN Oberon
-Module name:  antsArrayImages16 IN Oberon
-Module name:  antsArrayObjects IN Oberon
-Module name:  antsArrayPictures IN Oberon
-Module name:  antsArrayPictures16 IN Oberon
-Module name:  antsArrayStatistics IN Oberon
-Module name:  antsArrayViews IN Oberon
-Module name:  antsArrays IN Oberon
-Module name:  antsAutoNormalS IN Oberon
-Module name:  antsAutobinomialS IN Oberon
-Module name:  antsAztec IN Oberon
-Module name:  antsBasicGadgets IN Oberon
-Module name:  antsBellman IN Oberon
-Module name:  antsBinaryEmpiricD IN Oberon
-Module name:  antsBinaryEmpiricD2 IN Oberon
-Module name:  antsBinaryIsingS IN Oberon
-Module name:  antsBinaryIsingS2 IN Oberon
-Module name:  antsBinaryNINNED IN Oberon
-Module name:  antsCaches IN Oberon
-Module name:  antsColors IN Oberon
-Module name:  antsComet IN Oberon
-Module name:  antsCommandInvoker IN Oberon
-Module name:  antsCommands IN Oberon
-Module name:  antsConstRandom IN Oberon
-Module name:  antsContainers IN Oberon
-Module name:  antsDependency IN Oberon
-Module name:  antsDirSet IN Oberon
-Module name:  antsDiscreteEmpiricD IN Oberon
-Module name:  antsDiscreteIsingS IN Oberon
-Module name:  antsEdges IN Oberon
-Module name:  antsEffects IN Oberon
-Module name:  antsEmpiricD IN Oberon
-Module name:  antsEstimate IN Oberon
-Module name:  antsEstimate2 IN Oberon
-Module name:  antsExpressions IN Oberon
-Module name:  antsExpressionsDefaults IN Oberon
-Module name:  antsExpressionsObjects IN Oberon
-Module name:  antsFctEdit IN Oberon  
-Module name:  antsFctVector IN Oberon
-Module name:  antsFiles IN Oberon
-Module name:  antsFilters IN Oberon
-Module name:  antsFunctions IN Oberon
-Module name:  antsGauss1dModel IN Oberon
-Module name:  antsGlobals IN Oberon
-Module name:  antsGraph IN Oberon
-Module name:  antsHierarchicPotts2d IN Oberon
-Module name:  antsHistogramEdit IN Oberon
-Module name:  antsHybridObjects IN Oberon
-Module name:  antsImageViews IN Oberon
-Module name:  antsInteractivePar IN Oberon
-Module name:  antsIsingE IN Oberon
-Module name:  antsKernel IN Oberon
-Module name:  antsKernelViewer IN Oberon
-Module name:  antsLayerOps IN Oberon
-Module name:  antsLife IN Oberon
-Module name:  antsLinkView IN Oberon
-Module name:  antsMC IN Oberon
-Module name:  antsMCView IN Oberon
-Module name:  antsMDimDiscreteGS IN Oberon
-Module name:  antsMDimDiscreteIsingS IN Oberon
-Module name:  antsMDimDiscreteS IN Oberon
-Module name:  antsMDimEstimator IN Oberon
-Module name:  antsMDimMDiscreteIsingS IN Oberon
-Module name:  antsMasks IN Oberon
-Module name:  antsMatrixPar IN Oberon
-Module name:  antsMatrixParView IN Oberon
-Module name:  antsMeanArray IN Oberon
-Module name:  antsMessages IN Oberon
-Module name:  antsMinimizeF IN Oberon
-Module name:  antsModels IN Oberon
-Module name:  antsNDistrView IN Oberon
-Module name:  antsNNSampler IN Oberon
-Module name:  antsNeighbourhoods IN Oberon
-Module name:  antsObjectView IN Oberon
-Module name:  antsObjects IN Oberon
-Module name:  antsOnTheFly IN Oberon
-Module name:  antsOrganizers IN Oberon
-Module name:  antsPEIsingDS IN Oberon
-Module name:  antsPEV IN Oberon
-Module name:  antsPEVIsingDS IN Oberon
-Module name:  antsPerfectS IN Oberon
-Module name:  antsPictCoordinate IN Oberon
-Module name:  antsPictureViews IN Oberon
-Module name:  antsPlots IN Oberon
-Module name:  antsPointPlot IN Oberon
-Module name:  antsPointPlot2 IN Oberon
-Module name:  antsPortability IN Oberon
-Module name:  antsPorts IN Oberon 
-Module name:  antsPotts1DSurvey IN Oberon
-Module name:  antsPottsMonotone IN Oberon
-Module name:  antsPottsSimAdministration IN Oberon
-Module name:  antsPottsSimDataStructure IN Oberon
-Module name:  antsPottsSimulation IN Oberon
-Module name:  antsProgRandomWalk IN Oberon
-Module name:  antsRandom IN Oberon
-Module name:  antsRandomWalk IN Oberon
-Module name:  antsReadWrite IN Oberon
-Module name:  antsRegions IN Oberon
-Module name:  ScrollbarsR IN Oberon
-Module name:  antsScale IN Oberon
-Module name:  antsScriptObjects IN Oberon
-Module name:  antsSecurity IN Oberon
-Module name:  antsStatistics IN Oberon
-Module name:  antsTautString IN Oberon
-Module name:  antsTautStringTree IN Oberon
-Module name:  antsTexts IN Oberon
-Module name:  antsTextures IN Oberon
-Module name:  antsToolbox IN Oberon
-Module name:  antsTravelingS IN Oberon
-Module name:  antsValuePlot IN Oberon
-Module name:  antsVecOpt IN Oberon
-Module name:  antsVectors IN Oberon
-Module name:  antsViews IN Oberon
-Module name:  Voyager IN Oberon
-Module name:  dbgSortTest IN Oberon
-Module name:  dbgTestVec IN Oberon
-Module name:  jbrtStdNormal IN Oberon
-Module name:  vyAxis IN Oberon
-Module name:  vyBase IN Oberon
-Module name:  vyBit IN Oberon
-Module name:  vyBitmaps IN Oberon
-Module name:  vyBoolean IN Oberon
-Module name:  vyBooleanVec IN Oberon
-Module name:  vyBoxWhisker IN Oberon
-Module name:  vyCaption IN Oberon
-Module name:  vyCharts IN Oberon
-Module name:  vyChiSquare IN Oberon
-Module name:  vyColorPalettes IN Oberon
-Module name:  vyCommandMenus IN Oberon
-Module name:  vyComplex IN Oberon
-Module name:  vyConsume IN Oberon
-Module name:  vyDemo IN Oberon
-Module name:  vyDialogElems IN Oberon
-Module name:  vyDisplay2d IN Oberon
-Module name:  vyDistribution IN Oberon
-Module name:  vyEvents IN Oberon
-Module name:  vyFctEdit IN Oberon
-Module name:  vyFctRandom IN Oberon
-Module name:  vyFiles IN Oberon
-Module name:  vyGraph IN Oberon
-Module name:  vyGraphBase IN Oberon
-Module name:  vyGraphBase0 IN Oberon
-Module name:  vyGraphicCtl IN Oberon
-Module name:  vyGrid IN Oberon
-Module name:  vyHighlight IN Oberon
-Module name:  vyHistogram IN Oberon
-Module name:  vyHost IN Oberon
-Module name:  vyHostFonts IN Oberon
-Module name:  vyHostPrint IN Oberon
-Module name:  vyHostStrings IN Oberon
-Module name:  vyHostTexts IN Oberon
-Module name:  vyIcons IN Oberon
-Module name:  vyIn IN Oberon
-Module name:  vyIntVec IN Oberon
-Module name:  vyInteger IN Oberon
-Module name:  vyKolSmirL IN Oberon
-Module name:  vyLCpx IN Oberon
-Module name:  vyLabel IN Oberon
-Module name:  vyLayers3d IN Oberon
-Module name:  vyLine IN Oberon
-Module name:  vyLinePlot IN Oberon
-Module name:  vyLinks IN Oberon
-Module name:  vyLongComplex IN Oberon
-Module name:  vyLongint IN Oberon
-Module name:  vyLongintVec IN Oberon
-Module name:  vyLongreal IN Oberon
-Module name:  vyLongrealVec IN Oberon
-Module name:  vyMatrixTypes IN Oberon
-Module name:  vyMaxMass IN Oberon
-Module name:  vyMouseData IN Oberon
-Module name:  vyName IN Oberon
-Module name:  vyOut IN Oberon
-Module name:  vyPComplex IN Oberon
-Module name:  vyPHIGS3D IN Oberon
-Module name:  vyPLongComplex IN Oberon
-Module name:  vyPaint3d IN Oberon
-Module name:  vyPars IN Oberon
-Module name:  vyParser IN Oberon
-Module name:  vyPatterns IN Oberon
-Module name:  vyPointerVec IN Oberon
-Module name:  vyPolyWorld IN Oberon
-Module name:  vyPort IN Oberon
-Module name:  vyPortability IN Oberon
-Module name:  vyQFisher IN Oberon
-Module name:  vyQuickDraw IN Oberon
-Module name:  vyRan1 IN Oberon
-Module name:  vyRanBase IN Oberon
-Module name:  vyRanCombo IN Oberon
-Module name:  vyRanKiss IN Oberon
-Module name:  vyRanMWC IN Oberon
-Module name:  vyRanMWC1616 IN Oberon
-Module name:  vyRanParksMiller IN Oberon
-Module name:  vyRanSkeleton IN Oberon
-Module name:  vyRanSupr IN Oberon
-Module name:  vyRandom IN Oberon
-Module name:  vyRandu IN Oberon
-Module name:  vyReadMatrix IN Oberon
-Module name:  vyReal IN Oberon
-Module name:  vyRealVec IN Oberon
-Module name:  vyRectPlot IN Oberon
-Module name:  vyRectangles IN Oberon
-Module name:  vyRegress IN Oberon
-Module name:  vyScale IN Oberon
-Module name:  vyScanners IN Oberon
-Module name:  vyScatter IN Oberon
-Module name:  vyScatter1 IN Oberon
-Module name:  vyScatter2 IN Oberon
-Module name:  vyScatter3 IN Oberon
-Module name:  vySet IN Oberon
-Module name:  vyShorth IN Oberon
-Module name:  vySketch IN Oberon
-Module name:  vySlider IN Oberon
-Module name:  vySlider2d IN Oberon
-Module name:  vyStd2dLayer IN Oberon
-Module name:  vyStringVec IN Oberon
-Module name:  vySurface IN Oberon
-Module name:  vyTextsCtl IN Oberon
-Module name:  vyTracking IN Oberon
-Module name:  vyTypes IN Oberon
-Module name:  vyXPValues IN Oberon
-Module name:  vyXYPlane IN Oberon
-Module name:  RandomTest IN Oberon
-Module name:  vyxPlots IN Oberon
-Module name:  OberonDisplay
-Module name:  OberonFS
-Module name:  OberonFonts
-Module name:  OberonInput
-Module name:  ObjectFile
-Module name:  OdAuth
-Module name:  OdAuthBase
-Module name:  OdClient
-Module name:   OCT
-Module name:  OdCond
-Module name:  OdDeltavBase
-Module name:  OdPlugin
-Module name:  OdSvn
-Module name:  OdUtil
-Module name:  OdVCSBase
-Module name:  OdXml
-Module name:  OldDiskFS
-Module name:  OldDiskVolumes
-Module name:  OpenAL
-Module name:  OpenALSound
-Module name:  OpenType
-Module name:  OpenTypeFonts
-Module name:  OpenTypeInt
-Module name:  OpenTypeScan
-Module name:  Options
-Module name:  Out
-Module name:  PC
-Module name:  PCA386
-Module name:  PCAAMD64
-Module name:  for the Paco compiler *)
-
-MODULE PCAARM
-Module name:  PCARMCP
-Module name:  PCARMRegisters
-Module name:  PCArrays
-Module name:  PCB
-Module name:  PCBT
-Module name:  PCC
-Module name:  PCDebug
-Module name:  PCG386
-Module name:  PCGAMD64
-Module name:  PCGARM
-Module name:  PCITools
-Module name:  PCLIR
-Module name:  PCM
-Module name:  PCO
-Module name:  PCOARM
-Module name:  PCOF
-Module name:  PCOFPE
-Module name:  PCOM
-Module name:  PCP
-Module name:  PCS
-Module name:  PCT
-Module name:  PCTest
-Module name:  PCV
-Module name:  PDF
-Module name:  PDFExample
-Module name:  PET
-Module name:  PETModuleTree
-Module name:  PETReleaseTree
-Module name:  PETTrees
-Module name:  PETXMLTree
-Module name:  PKCS1
-Module name:  PNGDecoder
-Module name:  POP3Client
-Module name:  PartitionEditor
-Module name:  PartitionEditorComponents
-Module name:  PartitionEditorTable
-Module name:  Partitions
-Module name:  PartitionsLib
-Module name:  Performance
-Module name:  PersistentObjects
-Module name:  PictImages
-Module name:  PieTest
-Module name:  Ping
-Module name:  Pipes
-Module name:  Plugins
-Module name:  PositionDebugging
-Module name:  PowerManagementEvents
-Module name:  PresentViewer
-Module name:  Presentation
-Module name:  PrettyPrint
-Module name:  PrevalenceSystem
-Module name:  ProcedureInterfaces
-Module name:  ProcessInfo
-Module name:  ProcessInfo0
-Module name:  Profiler
-Module name:  Queues
-Module name:  QuoteServer
-Module name:  RAMVolumes
-Module name:  RAWPrinter
-Module name:  RFC865Client
-Module name:  RMSMTP
-Module name:  CPU
-Module name:  DisplayLinear
-Module name:  Environment
-Module name:  represents all logical processors of the system. *)
-MODULE Processors
-Module name:  Timer
-Module name:  RTL8136
-Module name:  RTL8139
-Module name:  RTL8169
-Module name:  Random
-Module name:  Raster
-Module name:  RasterPixelFormats
-Module name:  RealConversions
-Module name:  Reboot
-Module name:  Reflection
-Module name:  RegisterRFW
-Module name:  RelativeFileSystem 
-Module name:  Release
-Module name:  ReleaseThreadPool
-Module name:  ReleaseVisualizer
-Module name:  ReleaseVisualizerScanner
-Module name:  ReplaySystem
-Module name:  Repositories
-Module name:  RfsClientProxy
-Module name:  RfsConnection
-Module name:  RfsFS
-Module name:  Runtime
-Module name:  SCSI
-Module name:  SMTPClient
-Module name:  SSFS
-Module name:  SSH
-Module name:  SSHAuthorize
-Module name:  SSHChannels
-Module name:  SSHClient
-Module name:  SSHGlobals
-Module name:  SSHKeys
-Module name:  SSHPackets
-Module name:  SSHTerminal
-Module name:  SSHTransport
-Module name:  SVG
-Module name:  SVGColors
-Module name:  SVGDecoder
-Module name:  SVGFilters
-Module name:  SVGGradients
-Module name:  SVGLoader
-Module name:  SVGMatrix
-Module name:  SVGRenderer
-Module name:  SVGUtilities
-Module name:  SVN
-Module name:  SVNAdmin
-Module name:  SVNArgument
-Module name:  SVNOutput
-Module name:  SVNUtil
-Module name:  SVNWebDAV
-Module name:  UDPChatBase
-Module name:  UDPChatClient
-Module name:  UDPChatServer
-Module name:  SambaClient
-Module name:  SambaServer
-Module name:  Sd
-Module name:  SdDisks
-Module name:  SdInspect
-Module name:  SearchTools
-Module name:  SerialNetwork
-Module name:  Serials
-Module name:  SerialsVirtual
-Module name:  Shell
-Module name:  ShellCommands
-Module name:  ShellSerial
-Module name:  SkinEditor
-Module name:  SkinEngine
-Module name:  SkinLanguage
-Module name:  Snow
-Module name:  Unix
-Module name:  SortDemo
-Module name:  SoundDevices
-Module name:  StartConsole
-Module name:  StartMenu
-Module name:  StdIOShell
-Module name:  Stopwatch
-Module name:  StreamUtilities
-Module name:  Streams
-Module name:  StringPool
-Module name:  Strings
-Module name:  SymbiosDisks
-Module name:  SynergyClient
-Module name:  SyntaxHighlighter
-Module name:  System
-Module name:  SystemVersion
-Module name:  TCP
-Module name:  TCPPortLog
-Module name:  TCPServices
-Module name:  TCPTools
-Module name:  TFAOParser
-Module name:  TFCheck
-Module name:  TFClasses
-Module name:  TFDocGenerator
-Module name:  TFDumpTS
-Module name:  TFLog
-Module name:  TFModuleTrees
-Module name:  TFPET
-Module name:  TFSMTPServer
-Module name:  TFScopeTools
-Module name:  TFStringPool
-Module name:  TFTP
-Module name:  TFTPFS
-Module name:  TFTPServer
-Module name:  TFTypeSys
-Module name:  TFWebForum
-Module name:  TFXRef
-Module name:  TLS
-Module name:  Builtins
-Module name:  Channels
-Module name:  TV
-Module name:  TVChannels
-Module name:  TVDriver
-Module name:  TVRemoteControl
-Module name:  Tar
-Module name:  TaskScheduler
-Module name:  TeletextBrowser
-Module name:  TeletextDecoder
-Module name:  TeletextFont
-Module name:  TeletextViewer
-Module name:  Telnet
-Module name:  TestComponentDragDrop
-Module name:  TestComponents
-Module name:  TestDates
-Module name:  TestFiles
-Module name:  TestLocks
-Module name:  TestMenu
-Module name:  TestServer
-Module name:  TestStopwath
-Module name:  TestStrings
-Module name:  TestSuite
-Module name:  TestTLS
-Module name:  TestTrees
-Module name:  TestVideo
-Module name:  TestXMLPlugins
-Module name:  TextCompiler
-Module name:  TextConverter
-Module name:  TextUtilities
-Module name:  Texts
-Module name:  Trace
-Module name:  TraceRoute
-Module name:  TrapWriters
-Module name:  TuringCoatWnd
-Module name:  Types
-Module name:  UDP
-Module name:  UTF8Strings
-Module name:  UndoManager
-Module name:  UnicodeBidirectionality
-Module name:  UnicodeProperties
-Module name:  UnihanParser
-Module name:  Beep
-Module name:  BootConsole
-Module name:  Clipboard
-Module name:  Clock
-Module name:  DNS
-Module name:  Display
-Module name:  DisplayRefresher
-Module name:  Environment
-Module name:  Glue
-Module name:  HierarchicalProfiler0
-Module name:  HostLibs
-Module name:  IP
-Module name:  KbdMouse
-Module name:  Kernel
-Module name:  Machine
-Module name:  may be used under the conditions of the general Oberon System 3 license contract.
-The full text can be downloaded from
-
-	"ftp://ftp.inf.ethz.ch/pub/software/Oberon/System3/license.txt
-Module name:  NetSystem IN Oberon
-Module name:  may be used under the conditions of the general Oberon
-System 3 license contract. The full text can be downloaded from
-
-	"ftp://ftp.inf.ethz.ch/pub/software/Oberon/System3/license.txt
-Module name:  UnixPrinter IN Oberon
-Module name:  Objects
-Module name:  OpenAL
-Module name:  PrecisionTimer
-Module name:  ProcessInfo0
-Module name:  Processors
-Module name:  Sockets
-Module name:  StdIO
-Module name:  TCP
-Module name:  Timer
-Module name:  Traps
-Module name:  UDP
-Module name:  UnixFiles
-Module name:  V24
-Module name:  WMPerfMonPluginCpu
-Module name:  WMPerfMonPluginMemory
-Module name:  X11
-Module name:  XDisplay
-Module name:  UnixBinary
-Module name:  Unzip
-Module name:  UpTime
-Module name:  Usb
-Module name:  UsbBluetooth
-Module name:  UsbDebug
-Module name:  UsbDriverLoader
-Module name:  UsbEhci
-Module name:  UsbFTDI
-Module name:  UsbGarminGPS18
-Module name:  UsbHcdi
-Module name:  UsbHid
-Module name:  UsbHidDriver
-Module name:  UsbHidErrors
-Module name:  UsbHidParser
-Module name:  UsbHidParserExt
-Module name:  UsbHidReport
-Module name:  UsbHidUP
-Module name:  UsbHubDriver
-Module name:  UsbInfo
-Module name:  UsbMouse
-Module name:  UsbNetwork
-Module name:  UsbNetworkUSB200M
-Module name:  UsbPrinter
-Module name:  UsbRS232
-Module name:  UsbSkeleton
-Module name:  UsbStorage
-Module name:  UsbStorageBase
-Module name:  UsbStorageBoot
-Module name:  UsbStorageBot
-Module name:  UsbStorageCbi
-Module name:  UsbStorageScm
-Module name:  UsbTools
-Module name:  UsbTouchscreen
-Module name:  UsbUtilities
-Module name:  Usbdi
-Module name:  V24Tracer
-Module name:  VMWareTools
-Module name:  VNC
-Module name:  VNCServer
-Module name:  VNCTetrisServer
-Module name:  VecCplx
-Module name:  VecInt
-Module name:  VecRat
-Module name:  VecRe
-Module name:  Versioning
-Module name:  VideoExample
-Module name:  VirtualDisks
-Module name:  Visualizer
-Module name:  W3dAbstractWorld
-Module name:  W3dClusterWatch
-Module name:  W3dExplorer
-Module name:  W3dGeometry
-Module name:  W3dMatrix
-Module name:  W3dMenu
-Module name:  W3dObjectGenerator
-Module name:  W3dRasterizer
-Module name:  W3dVectors
-Module name:  W3dWorld
-Module name:  WAVCodec
-Module name:  WAVRecorder
-Module name:  WMAnimations
-Module name:  WMApplications
-Module name:  WMArabicIME
-Module name:  WMArchives
-Module name:  WMArmenianIME
-Module name:  WMBackdrop
-Module name:  WMBackdropLoader
-Module name:  WMBitmapFont
-Module name:  WMBuilder
-Module name:  WMBuilderTransformer
-Module name:  WMBunny
-Module name:  WMCCGFonts
-Module name:  WMCDRecorder
-Module name:  WMCalendar
-Module name:  WMCharCodes
-Module name:  WMCharMap
-Module name:  WMClock
-Module name:  WMColorComponents
-Module name:  WMColorPicker
-Module name:  WMComponents
-Module name:  WMDefaultFont
-Module name:  WMDefaultWindows
-Module name:  WMDesktopIcons
-Module name:  WMDesktops
-Module name:  WMDiagnostics
-Module name:  WMDiagramComponents
-Module name:  WMDialogs
-Module name:  WMDiff
-Module name:  WMDocumentEditor
-Module name:  WMDropDownLists
-Module name:  WMDropTarget
-Module name:  WMEditors
-Module name:  WMErrors
-Module name:  WMEthiopicIME
-Module name:  WMEventLog
-Module name:  WMEvents
-Module name:  WMFTPClient
-Module name:  WMFigures
-Module name:  WMFileManager
-Module name:  WMFontCCGConverter
-Module name:  WMFontManager
-Module name:  WMGraphicUtilities
-Module name:  WMGraphics
-Module name:  WMGraphicsDemo
-Module name:  WMGraphicsGfx
-Module name:  WMGraphicsSmooth
-Module name:  WMGrids
-Module name:  WMHebrewIME
-Module name:  WMHexEditor
-Module name:  WMImageGrid
-Module name:  WMInputMethodTool
-Module name:  WMInputMethods
-Module name:  WMInspectionComponents
-Module name:  WMInspector
-Module name:  WMInstaller
-Module name:  WMInterpreterShell
-Module name:  WMJoysticks
-Module name:  WMKernelLog
-Module name:  WMKeyCode
-Module name:  WMLanguageSwitcher
-Module name:  WMMacros
-Module name:  WMMatrixComponents
-Module name:  WMMenus
-Module name:  WMMessages
-Module name:  WMMixer
-Module name:  WMModuleState
-Module name:  WMNavigate
-Module name:  WMNavigator
-Module name:  WMOGGPlayer
-Module name:  WMOSD
-Module name:  WMOTFonts
-Module name:  WMOberonFonts
-Module name:  WMObjectTracker
-Module name:  WMOverlay
-Module name:  WMPartitions
-Module name:  WMPartitionsComponents
-Module name:  WMPerfMon
-Module name:  WMPerfMonAlerts
-Module name:  WMPerfMonAlertsUtils
-Module name:  WMPerfMonComponents
-Module name:  WMPerfMonPluginCpu
-Module name:  WMPerfMonPluginDisks
-Module name:  WMPerfMonPluginEvents
-Module name:  WMPerfMonPluginExample
-Module name:  WMPerfMonPluginFTPServer
-Module name:  WMPerfMonPluginHTTPServer
-Module name:  WMPerfMonPluginHeap
-Module name:  WMPerfMonPluginMemory
-Module name:  WMPerfMonPluginMessages
-Module name:  WMPerfMonPluginModVars
-Module name:  WMPerfMonPluginNetStats
-Module name:  WMPerfMonPluginNetwork
-Module name:  WMPerfMonPluginPerfMon
-Module name:  WMPerfMonPluginProcesses
-Module name:  WMPerfMonPluginQuoteServer
-Module name:  WMPerfMonPluginSerials
-Module name:  WMPerfMonPluginUsb
-Module name:  WMPerfMonPluginVNCServer
-Module name:  WMPerfMonPlugins
-Module name:  WMPerfMonTabAlerts
-Module name:  WMPerfMonTabSystem
-Module name:  WMPicView
-Module name:  WMPieMenu
-Module name:  WMPinyinIME
-Module name:  WMPlayer
-Module name:  WMPopups
-Module name:  WMProcessInfo
-Module name:  WMProfiler
-Module name:  WMProgressComponents
-Module name:  WMProperties
-Module name:  WMRectangles
-Module name:  WMRepositories
-Module name:  WMRestorable
-Module name:  WMRussianIME
-Module name:  WMScreenShot
-Module name:  WMScribble
-Module name:  WMScrollableComponents
-Module name:  WMSearchComponents
-Module name:  WMSearchTool
-Module name:  WMShapes
-Module name:  WMShell
-Module name:  WMSimpleGraphs
-Module name:  WMSkinLoader
-Module name:  WMSlideshow
-Module name:  WMStandardComponents
-Module name:  WMStringGrids
-Module name:  WMSystemComponents
-Module name:  WMTCPTracker
-Module name:  WMTabComponents
-Module name:  WMTaskScheduler
-Module name:  WMTerminator
-Module name:  WMTetris
-Module name:  WMTextStyleTool
-Module name:  WMTextTool
-Module name:  WMTextView
-Module name:  WMTransitions
-Module name:  WMTrapWriter
-Module name:  WMTrees
-Module name:  WMUkrainianIME
-Module name:  WMUnicodeIME
-Module name:  WMUnicodeMarkerTool
-Module name:  WMUsbInfo
-Module name:  WMUtilities
-Module name:  WMV24Component
-Module name:  WMVNCView
-Module name:  WMVT100
-Module name:  WMVisualComponentSkeleton
-Module name:  WMWindowManager
-Module name:  WMXMLTree
-Module name:  WPM
-Module name:  WebAccounts
-Module name:  WebBimbodot
-Module name:  WebBrowser
-Module name:  WebBrowserComponents
-Module name:  WebBrowserPanel
-Module name:  WebCGI
-Module name:  WebComplex
-Module name:  WebDefaultSSMP
-Module name:  WebFTPServer
-Module name:  WebForum
-Module name:  WebHTTP
-Module name:  WebHTTPClient
-Module name:  WebHTTPServer
-Module name:  WebHTTPServerStatistics
-Module name:  WebHTTPServerTools
-Module name:  WebHTTPTools
-Module name:  WebSSMPPlugin
-Module name:  WebSockets
-Module name:  WebStd
-Module name:  WebTimeServer
-Module name:  WebWormWatch
-Module name:  WhitespaceRemover
-Module name:  WindowManager
-Module name:  ADVAPI32
-Module name:  Beep
-Module name:  Clipboard
-Module name:  Clock
-Module name:  CommandLine
-Module name:  DNS
-Module name:  Display
-Module name:  Environment
-Module name:  GDI32
-Module name:  HierarchicalProfiler0
-Module name:  HostFiles
-Module name:  HostLibs
-Module name:  IP
-Module name:  Kernel
-Module name:  Kernel32
-Module name:  Machine
-Module name:  Network
-Module name:  may be used under the conditions of the general Oberon
-System 3 license contract.  The full text can be downloaded from
-
-	"ftp://ftp.inf.ethz.ch/pub/software/Oberon/System3/license.txt
-Module name:  Clipboard IN Oberon
-Module name:  Directories IN Oberon
-Module name:  FileDir IN Oberon
-Module name:  Files IN Oberon
-Module name:  FontRes IN Oberon
-Module name:  Kernel IN Oberon
-Module name:  NetSystem IN Oberon
-Module name:  PSPrinter IN Oberon
-Module name:  PlugInDocs IN Oberon
-Module name:  Printer IN Oberon
-Module name:  PrinterInfo IN Oberon
-Module name:  Registry IN Oberon
-Module name:  OberonConfiguration
-Module name:  ported for the windows version, fof. *)
-
-MODULE Objects
-Module name:  Performance
-Module name:  PrecisionTimer
-Module name:  Processors
-Module name:  may be used under the conditions of the general Oberon
-System 3 license contract.  The full text can be downloaded from
-
-	"ftp://ftp.inf.ethz.ch/pub/software/Oberon/System3/license.txt
-Module name:  SVNAdmin
-Module name:  Shell32
-Module name:  StdIO
-Module name:  TCP
-Module name:  Timer
-Module name:  Traps
-Module name:  UDP
-Module name:  User32
-Module name:  V24
-Module name:  VfW
-Module name:  WMPerfMonPluginCpu
-Module name:  WMPerfMonPluginMemory
-Module name:  WMTCPTracker
-Module name:  WSock32
-Module name:  WebNetworkTimeProtocol
-Module name:  WinApplications
-Module name:  WinDisks
-Module name:  WinFS
-Module name:  WinTrace
-Module name:  X509
-Module name:  XML
-Module name:  XMLComponents
-Module name:  XMLGeneratorSchema
-Module name:  XMLLoader
-Module name:  XMLObjects
-Module name:  XMLParser
-Module name:  XMLScanner
-Module name:  XMLStyle
-Module name:  XMLTransformer
-Module name:  XModem
-Module name:  XYModem
-Module name:  YMF754
-Module name:  YMF754Util
-Module name:  Zip
-Module name:  ZipFS
-Module name:  ZipTool
-Module name:  Zlib
-Module name:  ZlibBuffers
-Module name:  ZlibDeflate
-Module name:  ZlibInflate
-Module name:  ZlibReaders
-Module name:  ZlibWriters
-Module name:  Channels
-Module name:  Platform
-Module name:  CPU
-Module name:  DisplayLinear
-Module name:  Environment
-Module name:  Gpio
-Module name:  PrecisionTimer
-Module name:  PrivateWatchdog
-Module name:  represents all logical processors of the system. *)
-MODULE Processors
-Module name:  PsConfig
-Module name:  PsSerials
-Module name:  PsUart
-Module name:  PsUartInterrupts
-Module name:  PsUartMin
-Module name:  PsXAdc
-Module name:  SdControllers
-Module name:  SdEnvironment
-Module name:  SystemWatchdog
-Module name:  Timer
-Module name:  TraceDevice
-Module name:  UsbEhciPhy
-Module name:  UsbEhciZynq
-Module name:  XEmac
-Module name:  sr3DTexture
-Module name:  srBase
-Module name:  srE
-Module name:  srGL
-Module name:  srHex
-Module name:  srImage
-Module name:  srLifeVox
-Module name:  srM2Space
-Module name:  srM3Space
-Module name:  srM5Space
-Module name:  srM6Space
-Module name:  srMath
-Module name:  srRastermovie
-Module name:  srRayEngine
-Module name:  srRender
-Module name:  srRotaVox
-Module name:  srTexVox
-Module name:  srThermoCell
-Module name:  srTree
-Module name:  srVolShader
-Module name:  srVoxel
-Module name:  srVoxel2
-Module name:  srVoxel3
-Module name:  srVoxel4
-Module name:  srVoxel5
-Module name:  srvoxels
  OCT: 
 	Modules
 	Kernel
@@ -2109,21 +137,6 @@ Module name:  srvoxels
 # NIL) THEN KernelLog.String(": 
 ===============================================
 # not found in file #"): 
-===============================================
-#author# Felix Friedrich, Patrick Hunziker
-	#purpose# Testfile Generator
-*)
-
-MODULE FoxTestBackend: 
-	FoxBasic
-	FoxSyntaxTree
-	FoxFormats
-	FoxBackend
-	Options
-	Files
-	Commands
-	Strings
-	"\)
 ===============================================
 & (self # NIL) THEN self.AddImport(M) END: 
 ===============================================
@@ -2511,6 +524,13 @@ ActiveTimers:
 	Objects
 ===============================================
 Activities: 
+	SYSTEM
+	BaseTypes
+	Counters
+	CPU
+	Processors
+	Queues
+	Timer
 ===============================================
 Adaptec7: 
 	SYSTEM
@@ -3400,7 +1420,19 @@ CRC:
 ===============================================
 CRP: 
 ===============================================
+CRP IN Oberon: 
+	CRS
+	CRT
+	CRA
+	CRX
+	Sets
+	Texts
+	Oberon
+===============================================
 CRS: 
+===============================================
+CRS IN Oberon: 
+	Texts
 ===============================================
 CRT: 
 ===============================================
@@ -5340,6 +3372,19 @@ ExampleTextWriter:
 	TextUtilities
 	Math
 ===============================================
+Examples IN Oberon: 
+	Attributes
+	BasicGadgets
+	Desktops
+	Display
+	Gadgets
+	Oberon
+	Objects
+	Out
+	Printer
+	Texts
+	Documents
+===============================================
 Examples1 IN Oberon: 
 	Gadgets
 	Objects
@@ -5988,6 +4033,9 @@ FoxDocumentationHtml:
 	SYSTEM
 ===============================================
 FoxDocumentationParser: 
+	FoxDocumentationScanner
+	FoxDocumentationTree
+	Debugging
 ===============================================
 FoxDocumentationPrinter: 
 	FoxDocumentationTree
@@ -6000,6 +4048,9 @@ FoxDocumentationScanner:
 	Debugging
 ===============================================
 FoxDocumentationTree: 
+	FoxBasic
+	FoxDocumentationScanner
+	Strings
 ===============================================
 FoxFingerprinter: 
 	FoxSyntaxTree
@@ -6066,6 +4117,14 @@ FoxGlobal:
 	Strings
 	Dates
 	symbol(SyntaxTree.Import).module.moduleScope
+===============================================
+FoxHardware: 
+	FoxActiveCells
+	Streams
+	Diagnostics
+	Strings
+	Commands
+	Files
 ===============================================
 FoxInterfaceComparison: 
 	FoxBasic
@@ -6695,6 +4754,17 @@ FoxTest:
 	TextUtilities
 	Modules
 	KernelLog
+===============================================
+FoxTestBackend: 
+	FoxBasic
+	FoxSyntaxTree
+	FoxFormats
+	FoxBackend
+	Options
+	Files
+	Commands
+	Strings
+	"\)
 ===============================================
 FoxTextualSymbolFile: 
 	Debugging
@@ -7425,6 +5495,8 @@ HTTPSupport:
 	KernelLog
 ===============================================
 HeapManager: 
+	CPU
+	Processors
 ===============================================
 Heaps: 
 	Builtins
@@ -7952,6 +6024,10 @@ InterpreterShell:
 	FoxInterpreterSymbols
 ===============================================
 Interrupts: 
+	Activities
+	Counters
+	CPU
+	Queues
 ===============================================
 IsoImages: 
 	SYSTEM
@@ -9739,29 +7815,6 @@ Notepad:
 	WMWindowManager
 	WMDocumentEditor
 ===============================================
-Notes
-		Some statements are not portable (check them out using Search.NotPortable).
-		If a transparent gadget is placed on swarm gadget then it is messed up, that's because of
-		the way transparent gadgets are handled and cannot be helped.
-		Under Oberon System 3 for Windows the screensaver flickers if there are too many bees
-		in a swarm, that's obviously a Windows-related problem...
-*)
-
-MODULE Swarm IN Oberon: 
-	Display
-	Display3
-	Effects
-	Files
-	Gadgets
-	Input
-	Modules
-	Oberon
-	Objects
-	Printer
-	Printer3
-	RandomNumbers
-	Texts
-===============================================
 OCArrayBase if needed *)
 				IF ~arrayBaseImported THEN
 					IF (leftExpression # NIL) & IsMathArrayType(leftExpression.type) OR (rightExpression # NIL) & IsMathArrayType(rightExpression.type) THEN
@@ -9848,6 +7901,14 @@ OGGVorbisPlayer:
 	NewHTTPClient
 ===============================================
 OPA: 
+===============================================
+OPA IN Oberon: 
+	SYSTEM
+	Files
+	OPM
+	OPS
+	OPT
+	OPB
 ===============================================
 OPAData IN Oberon: 
 	Files
@@ -10229,11 +8290,10 @@ ObjectFile:
 Objects: 
 	SYSTEM
 	Trace
-	Glue
-	Unix
+	Kernel32
 	Machine
-	Heaps
 	Modules
+	Heaps
 ===============================================
 Objects IN A2: 
 ===============================================
@@ -12618,6 +10678,16 @@ SavePoints IN Oberon:
 ===============================================
 SaveScreen: 
 ===============================================
+SaveScreen IN Oberon: 
+	Modules
+	Objects
+	Texts
+	In
+	Viewers
+	Oberon
+	Input
+	Display
+===============================================
 SaveSisyphus IN Oberon: 
 	SYSTEM
 	Out
@@ -13260,6 +11330,21 @@ Suitcases IN Oberon:
 	Documents
 	Out
 ===============================================
+Swarm IN Oberon: 
+	Display
+	Display3
+	Effects
+	Files
+	Gadgets
+	Input
+	Modules
+	Oberon
+	Objects
+	Printer
+	Printer3
+	RandomNumbers
+	Texts
+===============================================
 SymbiosASPI: 
 	SYSTEM
 	Machine
@@ -13394,6 +11479,12 @@ TCP:
 	KernelLog
 ===============================================
 TCP IN A2: 
+===============================================
+TCPExample IN Oberon: 
+	Input
+	NetSystem
+	Texts
+	Oberon
 ===============================================
 TCPPortLog: 
 	Clock
@@ -14324,6 +12415,30 @@ TextMail IN Oberon:
 	Fonts
 	Strings
 ===============================================
+TextPopups IN Oberon: 
+	Modules
+	Display
+	Objects
+	OPM
+	OPS
+	ListRiders
+	Links
+	Attributes
+	Documents
+	Desktops
+	Texts
+	Oberon
+	Effects
+	Fonts
+	Display3
+	Gadgets
+	TextDocs
+	TextGadgets0
+	TextGadgets
+	Input
+	Views
+	Strings
+===============================================
 TextStreams: 
 ===============================================
 TextStreams IN Oberon: 
@@ -14511,6 +12626,13 @@ UDPChatServer:
 	Kernel
 	Events
 ===============================================
+UDPExample IN Oberon: 
+	Input
+	Strings
+	NetSystem
+	Texts
+	Oberon
+===============================================
 UTF8String anymore: 
 ===============================================
 UTF8Strings: 
@@ -14658,6 +12780,16 @@ UsbEhci:
 	UsbHcdi
 	Usbdi
 	UsbDebug
+===============================================
+UsbEhciPCI: 
+	SYSTEM
+	Machine
+	Kernel
+	KernelLog
+	PCI
+	UsbDebug
+	UsbHcdi
+	UsbEhci
 ===============================================
 UsbEhciPhy: 
 	SYSTEM
@@ -18373,75 +16505,6 @@ ZlibWriters IN Oberon:
 [EBP+12]
 				CMP EAX: 
 ===============================================
-[[FoxDocumentationParser]].
-
-	{{{
-	Documentation = {Document}.
-	Document      = {NewLine} Description {Section}.
-
-	Description   = {Paragraph}.
-	Paragraph     = CodeBlock | TextBlock | Heading | ListItem  | Table | Line.
-
-	Section       = SectionMarker Title Contents.
-	SectionMarker = "@" | "@@" | "@@@".
-
-	CodeBlock     = "{{{" any text "}}}".
-
-	Contents      = {Paragraph}.
-	Title         = Text.
-	TextBlock     = Text.
-
-	Heading       = HeadingMarker Text.
-	HeadingMarker = "=" | "==" | "===" .
-
-	ListItem      = ItemMarker Text.
-	ItemMarker    = NumberMarker | BulletMarker.
-	NumberMarker  = "#" | "##" | "###".
-	BulletMarker  = "*" | "**" | "***".
-
-	Table         = Row {Row}.
-	Row           = Cell {Cell}.
-	Cell          = CellMarker {TextElement}.
-	CellMarker    = HeaderMarker | DataMarker.
-	HeaderMarker  = "|=".
-	DataMarker    = "|".
-	Line          = "----".
-
-	Text          = {TextElement}.
-	TextElement   = Default | Italic | Bold | Link | URL | Label | Code | LineBreak.
-	Default       = word.
-
-	Italic        = ItalicMarker {TextElement} ItalicMarker.
-	ItalicMarker  = "/".
-
-	Bold          = BoldMarker {TextElement} BoldMarker.
-	BoldMarker    = "*".
-
-	Underline          = UnderlineMarker {TextElement} UnderlineMarker.
-	UnderlineMarker    = "_".
-
-	Link          = "[[" Target [ "|"  {TextElement} ] "]]".
-	Target        = word.
-
-	URL           = "[[" url "]]" |
-			"[[" url "|" {TextElement} "]]".
-
-	Label         = "<<" Target ">>".
-
-	Code          = "{{{" {TextElement} "}}}".
-
-	LineBreak     = "\\".
-	}}}
-
-	@author Felix Friedrich
-*)
-
-
-MODULE FoxDocumentationParser: 
-	FoxDocumentationScanner
-	FoxDocumentationTree
-	Debugging
-===============================================
 a BBT Text *)
 PROCEDURE LoadText*(text : Texts.Text: 
 ===============================================
@@ -20634,18 +18697,6 @@ constsize and codesize are measured in bytes.
 
 VarConsLinks:noffixups contains the number of offsets which follows immediatly. Module number refers to the modules in the import list: 
 ===============================================
-containing base class of hardware description object for emission of hardware on FPGAs
-**)
-
-
-MODULE FoxHardware: 
-	FoxActiveCells
-	Streams
-	Diagnostics
-	Strings
-	Commands
-	Files
-===============================================
 context): 
 ===============================================
 copied the procedure needed to this file to save space for the boot file (staubesv)
@@ -20704,72 +18755,8 @@ directive must be preceeded by module directive")
 						ELSIF afterImportsDirective THEN
 							Error(positionOfDirective: 
 ===============================================
-displays simple popup menus in TextDocs when clicking outside the text.
-	The contents of the menus can be edited and are stored in the file "TextPopups.Text"
-
-	This is an example of a menu description:
-
-	[Mod]	<= applies for files with suffix .Mod
-	Compiler.Compile *
-	Compiler.Compile */s
-	Compiler.Compile */f	<= commands that can be executed
-	Decoder.Decode ^
-	Analyzer.Analyze *
-	--------------------
-	<5 Recent Files>	<= include a list with the 5 recent files, you can also replace 5 by any other 	--------------------		number. These files can be opened directly by selecting the appropriate menu item
-	<Procedures>	<= include a list of all procedures declared in the text file
-			You can jump to the corresponding text position by selecting a menu item
-
-	<Types>	<= include a list of all types declared in the text file
-			You can jump to the corresponding text position by selecting a menu item
-	[Text]	<= applies for files with suffix .Text
-	TextDocs.SearchDiff /w
-	--------------------
-	<5 Recent Files>
-
-
-	[Tool]	<= applies for files with suffix .Tool
-	<5 Recent Files>
-
-	...
-*)
-
-MODULE TextPopups IN Oberon: 
-	Modules
-	Display
-	Objects
-	OPM
-	OPS
-	ListRiders
-	Links
-	Attributes
-	Documents
-	Desktops
-	Texts
-	Oberon
-	Effects
-	Fonts
-	Display3
-	Gadgets
-	TextDocs
-	TextGadgets0
-	TextGadgets
-	Input
-	Views
-	Strings
-===============================================
 do self.AddImport(new) (must be done there to break recursive imports) *)
 	ImporterPlugin* = PROCEDURE (self: Module: 
-===============================================
-documentation. Independent of source language.
-
-	The documentation tree represents the [[docuEBNF|EBNF]] as implemented by [[FoxDocumentationParser]]
-	#author# Felix Friedrich
-*)
-MODULE FoxDocumentationTree: 
-	FoxBasic
-	FoxDocumentationScanner
-	Strings
 ===============================================
 documents any more
 	17.11.94 - improved option char
@@ -20889,18 +18876,6 @@ fofAutomatic IN Oberon:
 	antsSecurity
 	antsMessages
 ===============================================
-for the OP2 compiler *)
-
-
-
-MODULE OPA IN Oberon: 
-	SYSTEM
-	Files
-	OPM
-	OPS
-	OPT
-	OPB
-===============================================
 for the Paco compiler *)
 
 MODULE PCAARM: 
@@ -20914,20 +18889,6 @@ MODULE PCAARM:
 	PCP
 	PCOARM
 	KernelLog
-===============================================
-generated by Coco-R *)
-MODULE CRP IN Oberon: 
-	CRS
-	CRT
-	CRA
-	CRX
-	Sets
-	Texts
-	Oberon
-===============================================
-generated by Coco-R *)
-MODULE CRS IN Oberon: 
-	Texts
 ===============================================
 h : SIGNED32: 
 ===============================================
@@ -20969,42 +18930,6 @@ if necessary
 if no operator then return NIL
 		**)
 		PROCEDURE NewBinaryOperatorCall*(position: Position: 
-===============================================
-illustrates how gadgets can be manipulated under program control.
-	Commands exported by this module are used in the tutorial "GadgetsOberon.html".
-*)
-
-MODULE Examples IN Oberon: 
-	Attributes
-	BasicGadgets
-	Desktops
-	Display
-	Gadgets
-	Oberon
-	Objects
-	Out
-	Printer
-	Texts
-	Documents
-===============================================
-illustrates how to use the TCP based part of NetSystem.
-	A command Time is implemented, which ask your time server for the current time. *)
-
-MODULE TCPExample IN Oberon: 
-	Input
-	NetSystem
-	Texts
-	Oberon
-===============================================
-illustrates how to use the UDP based part of NetSystem.
-	A command DNS is implemented, which does a DNS look up. *)
-
-MODULE UDPExample IN Oberon: 
-	Input
-	Strings
-	NetSystem
-	Texts
-	Oberon
 ===============================================
 imp.name: 
 ===============================================
@@ -21099,6 +19024,58 @@ imports.GetSymbol(i):
 ===============================================
 in PCOM.Export: 
 ===============================================
+in any way that disagrees with style or content of the system and (b) requested to provide all conversions
+of the source code to another platform with the name OBERON. *)
+
+MODULE Clipboard IN Oberon: 
+	SYSTEM
+	Files
+	Texts
+	Oberon
+	Displays IN A2
+	XDisplay IN A2
+	Plugins IN A2
+	Display
+	X11 IN A2
+	Strings
+	Modules IN A2
+	Machine IN A2
+===============================================
+in any way that disagrees with the style
+or content of the system and (b) requested to provide all conversions
+of the source code to another platform with the name OBERON. *)
+
+MODULE ODBC: 
+	SYSTEM
+	Kernel32
+	Modules
+===============================================
+in any way that disagrees with the style
+or content of the system and (b) requested to provide all conversions
+of the source code to another platform with the name OBERON. *)
+
+MODULE Printer IN Oberon: 
+	Files
+	Modules
+	Fonts
+	Texts
+	Input
+	Oberon
+	Pictures
+===============================================
+in any way that disagrees with the style
+or content of the system and (b) requested to provide all conversions
+of the source code to another platform with the name OBERON. *)
+
+MODULE SQL: 
+	ODBC
+	Modules
+	KernelLog
+	SYSTEM
+	Files
+	Kernel
+	Heaps
+===============================================
 in source code
 		- has no representation in hardware
 	*)
@@ -21115,43 +19092,6 @@ in source code
 ===============================================
 invariant check simplified
 	20.10.01	prk	ParameterMatch: 
-===============================================
-is freed
-	- InstallDefault procedure added to restore the default fader.
-	- Log output is now smart about placing newlines.
-1.1 - 1999.11.05/19:46 - bpsm
-	- mouseTolerance added. Mouse must move at least this far to be noticed.
-	- Particles fader moved to a separate module
-	- Default screen saver now just blanks the screen.
-	- Rand added
-	- Limit added
-	- HandleFiller cleaned up.
-1.1.1 - 1999.11.06/00:04 - bpsm
-	- Screen is now redrawn explicitly after the fader has been stopped.
-1.1.2 - 1999.11.12/16:45 - bpsm
-	- TextFrames now redraw correctly on the Sharks (again).
-	- Clicking the mouse on SaveScreen.Run no longer causes wierdness.
-1.1.3 - 2000.03.29 - bpsm
-	- hopefully final tweak of redraw behavior (thanks pieter!)
-	- should handle timer rollover
-	- screen saver engine retooled internally.
-	- less verbose.
-	- faders no longer continue to draw after a system TRAP
-1.1.4 - 2000.04.03 - bpsm
-	- automatic activation of screen saver on loading (req: pjm)
-	- default wait time changed to 10 minutes (req: pjm)
-*)
-
-
-MODULE SaveScreen IN Oberon: 
-	Modules
-	Objects
-	Texts
-	In
-	Viewers
-	Oberon
-	Input
-	Display
 ===============================================
 is not available"): 
 ===============================================
@@ -21209,47 +19149,6 @@ lists (for module scopes)
 			- procedure declarations
 			preformed in two stages:
 				- first all symbols are entered into the symbol table (with uniqueness check): 
-===============================================
-may be used under the conditions of the general Oberon
-System 3 license contract.  The full text can be downloaded from
-
-	"ftp://ftp.inf.ethz.ch/pub/software/Oberon/System3/license.txt: 
-	ODBC
-	Modules
-	KernelLog
-	SYSTEM
-	Files
-	Kernel
-	Heaps
-===============================================
-may be used under the conditions of the general Oberon
-System 3 license contract. The full text can be downloaded from
-
-	"ftp://ftp.inf.ethz.ch/pub/software/Oberon/System3/license.txt: 
-	Files
-	Modules
-	Fonts
-	Texts
-	Input
-	Oberon
-	Pictures
-===============================================
-may be used under the conditions of the general Oberon System 3 license contract.
-The full text can be downloaded from
-
-	"ftp://ftp.inf.ethz.ch/pub/software/Oberon/System3/license.txt: 
-	SYSTEM
-	Files
-	Texts
-	Oberon
-	Displays IN A2
-	XDisplay IN A2
-	Plugins IN A2
-	Display
-	X11 IN A2
-	Strings
-	Modules IN A2
-	Machine IN A2
 ===============================================
 module: 
 ===============================================
@@ -21420,33 +19319,9 @@ parameter.identifier:
 path		: Override the path option specified in the package description file
  *		Option s: 
 ===============================================
-ported for the windows version, fof. *)
-
-MODULE Objects: 
-	SYSTEM
-	Trace
-	Kernel32
-	Machine
-	Modules
-	Heaps
-===============================================
 position): 
 ===============================================
 procedure GetRootHubs now copies rootHubs array: 
-===============================================
-provides a hardware-independent synchronisation primitive for awaiting the occurrence of interrupts. *)
-
-MODULE Interrupts: 
-	Activities
-	Counters
-	CPU
-	Queues
-===============================================
-provides a lock-free data structure called Heap that handles memory management. *)
-
-MODULE HeapManager: 
-	CPU
-	Processors
 ===============================================
 provides an automatic memory management for pointers allocated using the NEW statement. *)
 
@@ -21456,36 +19331,10 @@ MODULE GarbageCollector:
 	Counters
 	CPU
 ===============================================
-provides installation services for EHCI controllers connected with PCI.
- * This service was separated from the EHCI HCD to improve code reuse with EHCI controllers wired directly to CPUs, as it
- * is the case in several ARM systems.
- *)
-MODULE UsbEhciPCI: 
-	SYSTEM
-	Machine
-	Kernel
-	KernelLog
-	PCI
-	UsbDebug
-	UsbHcdi
-	UsbEhci
-===============================================
 provides synchronization objects called mutexes. *)
 MODULE Mutexes: 
 	Activities
 	Queues
-===============================================
-provides the runtime support for activities associated with active objects. *)
-
-
-MODULE Activities: 
-	SYSTEM
-	BaseTypes
-	Counters
-	CPU
-	Processors
-	Queues
-	Timer
 ===============================================
 pscope: 
 ===============================================

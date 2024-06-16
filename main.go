@@ -9,55 +9,105 @@ import (
 	"strings"
 )
 
-type imports []string
-type Modules map[string]imports
+type Imports []string
+
+type Module struct {
+	Name string
+	Imports
+}
+
+func NewModule(name string) Module {
+	imps := make(Imports, 0)
+	return Module{name, imps}
+}
+func (m Module) String() string {
+	res := fmt.Sprintf("%s:\n", m.Name)
+	for _, imp := range m.Imports {
+		res += fmt.Sprintf("\t%s\n", imp)
+	}
+	res += "===============================================\n"
+	return res
+}
+
+func (m Modules) calculateRank(mod Module, visited map[string]bool) int {
+	if visited[name] {
+		return 0
+	}
+	visited[name] = true
+
+	moduleImports, exists := modules[name]
+	if !exists || len(moduleImports) == 0 {
+		return 0
+	}
+
+	maxRank := 0
+	for _, imp := range moduleImports {
+		rank := calculateRank(imp, modules, visited)
+		if rank > maxRank {
+			maxRank = rank
+		}
+	}
+	return maxRank + 1
+}
+
+type Modules []Module
+
+func NewModules() Modules {
+	return make(Modules, 0)
+}
+
+func (m Modules) String() string {
+	res := ""
+	for _, mod := range m {
+		res += mod.String()
+	}
+	return res
+}
+
+func (m Modules) Sort() {
+	sort.Slice(m, func(i, j int) bool {
+		return m[i].Name < m[j].Name
+	})
+}
+
+func (m Modules) Add(mod Module) {
+	m = append(m, mod)
+}
+
+func (m Modules) Contains(name string) bool {
+	for _, mod := range m {
+		if mod.Name == name {
+			return true
+		}
+	}
+	return false
+}
 
 func main() {
-	// dir := "/home/andrejjj/Projects/Aos/A2-oberon/source"
-	dir := "/home/andrejjj/Projects/Aos/xlam/11"
+	dir := "/home/andrejjj/Projects/Aos/A2-oberon/source"
+	// dir := "/home/andrejjj/Projects/Aos/xlam/11"
 	modules := parseModules(dir)
-
-	moduleNames := make([]string, 0, len(modules))
-	for name := range modules {
-		moduleNames = append(moduleNames, name)
-	}
-	sort.Strings(moduleNames)
-
-	Print(moduleNames, modules)
-
+	modules.Sort()
+	fmt.Println(modules)
 	generateDOT(modules, "modules_graph.dot")
 }
 
-func Print(moduleNames []string, modules map[string]imports) {
-	for _, name := range moduleNames {
-		moduleImports := modules[name]
-		fmt.Printf("%s: \n", name)
-		for _, imp := range moduleImports {
-			fmt.Printf("\t%s\n", imp)
-		}
-		fmt.Println("===============================================")
-	}
-}
-
 func parseModules(dir string) Modules {
-	modules := make(Modules)
+	modules := NewModules()
 
 	err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
 		if !info.IsDir() && (strings.HasSuffix(info.Name(), ".Mod") || strings.HasSuffix(info.Name(), ".mod")) {
-			moduleName, moduleImports, err := parseModuleFile(path)
-			if moduleName == "" {
+			mod, err := parseModuleFile(path)
+			if err != nil || mod.Name == "" {
 				return fmt.Errorf("error parsing module file %q: module name not found", path)
 			}
-
-			if err == nil {
-				modules[moduleName] = moduleImports
-				for _, imp := range moduleImports {
-					if _, ok := modules[imp]; !ok {
-						modules[imp] = nil
-					}
+			modules.Add(mod)
+			for _, imp := range mod.Imports {
+				if !modules.Contains(imp) {
+					modules.Add(NewModule(imp))
 				}
 			}
 		}
@@ -67,19 +117,17 @@ func parseModules(dir string) Modules {
 		fmt.Printf("Error walking the path %q: %v\n", dir, err)
 		return nil
 	}
-
 	return modules
 }
 
-func parseModuleFile(path string) (string, imports, error) {
+func parseModuleFile(path string) (Module, error) {
 	file, err := os.Open(path)
 	if err != nil {
-		return "", nil, err
+		return NewModule(""), err
 	}
 	defer file.Close()
 
-	var moduleName string
-	var moduleImports imports
+	mod := NewModule("")
 
 	// Читаем весь файл
 	fileInfo, err := file.Stat()
@@ -96,8 +144,8 @@ func parseModuleFile(path string) (string, imports, error) {
 	text := string(fileContent)
 
 	// Используем флаг (?s) чтобы . соответствовал любому символу, включая новую строку
-	// reModule := regexp.MustCompile(`(?is)MODULE\s+([\/\.\s\w\(\*\)]+);`)
-	reModule := regexp.MustCompile(`(?is)MODULE\s+([^;]+?);`)
+	reModule := regexp.MustCompile(`(?is)MODULE\s+([\/\.\s\w\(\*\)]+);`)
+	// reModule := regexp.MustCompile(`(?is)MODULE\s+([^;]+?);`)
 	reImport := regexp.MustCompile(`(?is)IMPORT\s+([^;]+?);`)
 	reComment := regexp.MustCompile(`(?s)\(\*\*?.*?\*\)`)
 
@@ -128,10 +176,10 @@ func parseModuleFile(path string) (string, imports, error) {
 			}
 		}
 	}
-	return moduleName, moduleImports, nil
+	return mod, nil
 }
 
-func generateDOT(modules map[string]imports, filename string) {
+func generateDOT(modules Modules, filename string) {
 	f, err := os.Create(filename)
 	if err != nil {
 		fmt.Println("Error creating DOT file:", err)
@@ -146,10 +194,10 @@ func generateDOT(modules map[string]imports, filename string) {
 	visited := make(map[string]bool)
 	var maxRank int
 
-	for name := range modules {
-		if !visited[name] {
-			rank := calculateRank(name, modules, visited)
-			ranks[rank] = append(ranks[rank], name)
+	for _, mod := range modules {
+		if !visited[mod.Name] {
+			rank := calculateRank(mod, modules, visited)
+			ranks[rank] = append(ranks[rank], mod.Name)
 			if rank > maxRank {
 				maxRank = rank
 			}
@@ -162,34 +210,13 @@ func generateDOT(modules map[string]imports, filename string) {
 		}
 	}
 
-	for name, moduleImports := range modules {
-		for _, imp := range moduleImports {
-			if _, exists := modules[imp]; exists {
-				f.WriteString(fmt.Sprintf("  \"%s\" -> \"%s\";\n", name, imp))
+	for _, mod := range modules {
+		for _, imp := range mod.Imports {
+			if modules.Contains(imp) {
+				f.WriteString(fmt.Sprintf("  \"%s\" -> \"%s\";\n", mod.Name, imp))
 			}
 		}
 	}
 
 	f.WriteString("}\n")
-}
-
-func calculateRank(name string, modules map[string]imports, visited map[string]bool) int {
-	if visited[name] {
-		return 0
-	}
-	visited[name] = true
-
-	moduleImports, exists := modules[name]
-	if !exists || len(moduleImports) == 0 {
-		return 0
-	}
-
-	maxRank := 0
-	for _, imp := range moduleImports {
-		rank := calculateRank(imp, modules, visited)
-		if rank > maxRank {
-			maxRank = rank
-		}
-	}
-	return maxRank + 1
 }
