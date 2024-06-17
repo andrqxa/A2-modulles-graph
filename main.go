@@ -7,6 +7,8 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+
+	"github.com/spf13/viper"
 )
 
 type Imports []string
@@ -117,6 +119,7 @@ func (ms Modules) generateDOT(filename string) {
 	visited := make(map[string]bool)
 	var maxRank int
 
+	// Calculate ranks for modules
 	for _, mod := range ms {
 		if !visited[mod.Name] {
 			rank := ms.calculateRank(mod, visited)
@@ -127,12 +130,18 @@ func (ms Modules) generateDOT(filename string) {
 		}
 	}
 
+	// Write nodes with the same rank
 	for rank := 0; rank <= maxRank; rank++ {
 		if moduleNames, exists := ranks[rank]; exists {
-			f.WriteString(fmt.Sprintf("  { rank=same; %s }\n", strings.Join(moduleNames, " ")))
+			f.WriteString("  { rank=same; ")
+			for _, name := range moduleNames {
+				f.WriteString(fmt.Sprintf("\"%s\" ", name))
+			}
+			f.WriteString("}\n")
 		}
 	}
 
+	// Write edges
 	for _, mod := range ms {
 		for _, imp := range mod.Imports {
 			if ms.Contains(imp) {
@@ -145,9 +154,16 @@ func (ms Modules) generateDOT(filename string) {
 }
 
 func main() {
-	// Example directory with module files
-	// dir := "/home/andrejjj/Projects/A2/A2-oberon/source"
-	dir := "/home/andrejjj/Projects/A2/xlam/11"
+
+	viper.SetConfigName("config")
+	viper.SetConfigType("yaml")
+	viper.AddConfigPath(".")
+
+	err := viper.ReadInConfig()
+	if err != nil {
+		panic(fmt.Errorf("fatal error config file: %w", err))
+	}
+	dir := viper.GetString("app.dir")
 	modules := parseModules(dir)
 	modules.Sort()
 	fmt.Println(modules)
@@ -168,11 +184,11 @@ func parseModules(dir string) Modules {
 				return fmt.Errorf("error parsing module file %q: module name not found", path)
 			}
 			modules.Add(mod)
-			for _, imp := range mod.Imports {
-				if !modules.Contains(imp) {
-					modules.Add(NewModule(imp))
-				}
-			}
+			// for _, imp := range mod.Imports {
+			// 	if !modules.Contains(imp) {
+			// 		modules.Add(NewModule(imp))
+			// 	}
+			// }
 		}
 		return nil
 	})
@@ -185,7 +201,6 @@ func parseModules(dir string) Modules {
 
 // Parse a module file to extract module name and imports
 func parseModuleFile(path string) (Module, error) {
-	fmt.Println("Parsing module file: ", path)
 	file, err := os.Open(path)
 	if err != nil {
 		return NewModule(""), err
@@ -210,7 +225,6 @@ func parseModuleFile(path string) (Module, error) {
 
 	// Use regex to find module name and imports
 	reModule := regexp.MustCompile(`(?is)MODULE\s+([\/\.\s\w\(\*\)]+);`)
-	// reModule := regexp.MustCompile(`(?is)MODULE\s+([^;]+?);`)
 	reImport := regexp.MustCompile(`(?is)IMPORT\s+([^;]+?);`)
 	reComment := regexp.MustCompile(`(?is)\(\*\*?.*?\*\)`)
 
@@ -218,27 +232,21 @@ func parseModuleFile(path string) (Module, error) {
 
 	moduleMatches := reModule.FindStringSubmatch(text)
 	if moduleMatches != nil {
-		// mod.Name = reComment.ReplaceAllString(moduleMatches[1], "")
 		mod.Name = moduleMatches[1]
-		// fmt.Println("Module name: ", moduleName)
 	}
 
 	importMatches := reImport.FindAllStringSubmatch(text, -1)
-	// for _, match := range importMatches {
-	// 	fmt.Println("Import matches: ", match)
-	// }
-
-	// for _, match := range importMatches {
 	var imports string
-	if len(importMatches[0]) > 0 {
+	var importList []string
+	switch {
+	case len(importMatches) == 0:
+		imports = ""
+	case len(importMatches[0]) > 0:
 		imports = importMatches[0][1]
-	} else {
+	default:
 		imports = importMatches[0][0]
 	}
-	// imports = strings.ReplaceAll(imports, "\n", "")
-	// imports = string(reComment.ReplaceAll([]byte(imports), []byte("")))
-	// fmt.Println("Import matches: ", imports)
-	importList := regexp.MustCompile(`[,]+`).Split(imports, -1)
+	importList = regexp.MustCompile(`[,]+`).Split(imports, -1)
 	for _, imp := range importList {
 		imp = strings.TrimSpace(imp)
 		impRight := strings.Split(imp, ":=")
@@ -248,12 +256,8 @@ func parseModuleFile(path string) (Module, error) {
 			imp = strings.TrimSpace(impRight[0])
 		}
 		if imp != "" {
-			// fmt.Println(imp)
-			// mod.AddImport(reComment.ReplaceAllString(imp, ""))
 			mod.AddImport(imp)
-			// fmt.Println(mod)
 		}
 	}
-	// }
 	return mod, nil
 }
