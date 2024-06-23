@@ -58,8 +58,7 @@ go.work
 /tmp
 
 # NAME_OF_APPLICATION (from Makefile) - for avoiding linux executing files
-A2-modules-graph
-A2-modules-graph.exe
+output
 
 # === Docker specific ===
 **/db-data/*

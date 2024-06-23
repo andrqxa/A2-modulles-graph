@@ -1,22 +1,15 @@
 package config
 
 import (
-	"fmt"
-	"os"
-
 	"github.com/spf13/viper"
 )
 
-func ConfigViper() {
+func ConfigViper() error {
 	// Set configuration file
 	viper.SetConfigName("config")
-	viper.AddConfigPath(".")
+	viper.AddConfigPath("../")
 	viper.SetConfigType("yaml")
 
 	// Read configuration file
-	err := viper.ReadInConfig()
-	if err != nil {
-		fmt.Println("Error reading config file")
-		os.Exit(1)
-	}
+	return viper.ReadInConfig()
 }

@@ -1,0 +1,4 @@
+app:
+  dir: ../../../../Aos/A2-oberon/source
+  test-dir: ../../../../Aos/xlam/11
+  output-txt: ../output/modules.txt
