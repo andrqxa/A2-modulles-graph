@@ -21,11 +21,11 @@ func NewModule(name string) Module {
 
 // String representation of Module
 func (m Module) String() string {
-	res := fmt.Sprintf("%s:\n", m.Name)
+	res := fmt.Sprintf("%s:\\n", m.Name)
 	for _, imp := range m.Imports {
-		res += fmt.Sprintf("\t%s\n", imp)
+		res += fmt.Sprintf("\\t%s\\n", imp)
 	}
-	res += "===============================================\n"
+	res += "===============================================\\n"
 	return res
 }
 
@@ -108,42 +108,55 @@ func (ms Modules) GenerateDOT(filename string) {
 	defer f.Close()
 
 	f.WriteString("digraph G {\n")
-	f.WriteString("  node [shape=box, style=filled, color=lightblue];\n")
+	f.WriteString("\trankdir=LR;\n")
+	f.WriteString("\tsize=\"10,10\";\n")
+	f.WriteString("\tnode [shape=box, style=filled, color=lightblue];\n") // Добавлен стиль для узлов
 
-	ranks := make(map[int][]string)
-	visited := make(map[string]bool)
-	var maxRank int
-
-	// Calculate ranks for modules
+	// Создание кластеров
+	clusters := make(map[string][]Module)
 	for _, mod := range ms {
-		if !visited[mod.Name] {
-			rank := ms.calculateRank(mod, visited)
-			ranks[rank] = append(ranks[rank], mod.Name)
-			if rank > maxRank {
-				maxRank = rank
-			}
-		}
+		clusterName := getClusterName(mod.Name) // Получаем имя кластера на основе имени модуля
+		clusters[clusterName] = append(clusters[clusterName], mod)
 	}
 
-	// Write nodes with the same rank
-	for rank := 0; rank <= maxRank; rank++ {
-		if moduleNames, exists := ranks[rank]; exists {
-			f.WriteString("  { rank=same; ")
-			for _, name := range moduleNames {
-				f.WriteString(fmt.Sprintf("\"%s\" ", name))
-			}
-			f.WriteString("}\n")
+	for clusterName, mods := range clusters {
+		f.WriteString(fmt.Sprintf("\tsubgraph cluster_%s {\n", clusterName))
+		f.WriteString(fmt.Sprintf("\t\tlabel = \"%s\";\n", clusterName))
+		f.WriteString("\t\tstyle=filled;\n")
+		f.WriteString("\t\tcolor=lightgrey;\n")
+		for _, mod := range mods {
+			f.WriteString(fmt.Sprintf("\t\t\"%s\";\n", mod.Name))
 		}
+		f.WriteString("\t}\n")
 	}
 
-	// Write edges
+	// Создание рёбер
 	for _, mod := range ms {
 		for _, imp := range mod.Imports {
-			if ms.Contains(imp) {
-				f.WriteString(fmt.Sprintf("  \"%s\" -> \"%s\";\n", mod.Name, imp))
-			}
+			f.WriteString(fmt.Sprintf("\t\"%s\" -> \"%s\";\n", mod.Name, imp))
 		}
 	}
 
 	f.WriteString("}\n")
+}
+
+// Вспомогательная функция для получения имени кластера
+func getClusterName(moduleName string) string {
+	// Пример: возвращаем первые буквы имени модуля в качестве имени кластера
+	if len(moduleName) > 0 {
+		return string(moduleName[0])
+	}
+	return "default"
+}
+
+// Вспомогательная функция для объединения строк
+func joinStrings(strs []string, sep string) string {
+	result := ""
+	for i, str := range strs {
+		if i > 0 {
+			result += sep
+		}
+		result += str
+	}
+	return result
 }
